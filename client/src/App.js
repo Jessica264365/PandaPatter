@@ -12,10 +12,11 @@ import Bootstrap from "bootstrap/dist/css/bootstrap.min.css"
 function App() {
   return   (
     <Router>
-      <Route exact path ="/flashcard" component={Flashcard}/>
+      <Route exact path = "/translate" component={Translate} />
+      <Route path ="/flashcard" component={Flashcard}/>
       <Route path = "/login" component={Login}/>
       <Route path = "/register" component={Register} />
-      <Route path = "/translate" component={Translate} />
+     
     </Router>
   )
    
