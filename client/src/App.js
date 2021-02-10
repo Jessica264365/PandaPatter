@@ -17,8 +17,8 @@ function App() {
         <Navbar />
       <Route exact path = "/translate" component={Translate} />
       <Route path ="/flashcard" component={Flashcard}/>
-      <Route path = "/login" component={Login}/>
-      <Route path = "/register" component={Register} />
+      <Route exact path = "/" component={Login}/>
+      <Route exact path = "/register" component={Register} />
       </div>
     </Router>
   )

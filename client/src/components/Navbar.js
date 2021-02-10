@@ -2,8 +2,7 @@ import React from "react"
 
 function Navbar() {
     return(
-        
-            <div>
+            
                 <nav className="navbar navbar-expand-lg navbar-gray bg-dark">
     <div className="container">
       <img src="./PandaPatterTwo.png" id="picture" /><a className="navbar-brand" id="icon"> Welcome to Panda Patter </a>
@@ -17,7 +16,7 @@ function Navbar() {
       </div>
     </div>
   </nav>
-            </div>
+            
         
     )
 }
