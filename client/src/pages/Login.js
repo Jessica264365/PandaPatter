@@ -1,6 +1,24 @@
 import React,  {useState} from "react"
 import "../style/Main.css"
 function Login() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
+    const signInWithEmailAndPasswordHandler = 
+            (event,email, password) => {
+                event.preventDefault();
+    };
+
+      const onChangeHandler = (event) => {
+          const {name, value} = event.currentTarget;
+
+          if(name === 'userEmail') {
+              setEmail(value);
+          }
+          else if(name === 'userPassword'){
+            setPassword(value);
+          }
+      };
     return (
         <div className="container" id="hidden">
         <main className="row" >
@@ -11,16 +29,16 @@ function Login() {
                         <label for="email">Email</label>
                     </div>
                     <div>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                        <input type="userEmail" value={email} className="form-control" id="userEmail" aria-describedby="emailHelp" onChange={(e)=>onChangeHandler(e)}/>
           </div><br />
                         <div>
                             <label for="password">Password</label>
                         </div>
                         <div>
-                            <input type="password" className="form-control" id="exampleInputPassword1" />
+                            <input type="password" value={password} className="form-control" id="userPassword" onChange={(e)=> onChangeHandler(e)} />
           </div>
                             <br />
-                            <button type="submit">Login</button>
+                            <button type="submit" onClick = {(event) => {signInWithEmailAndPasswordHandler(event, email, password)}}>Login</button>
                             <br /><br />
                             <a href="./register" >New user? Register here!</a>
         </form><br />
