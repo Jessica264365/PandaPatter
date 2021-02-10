@@ -19,7 +19,17 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-    "express": "^4.16.3",
-    "if-env": "^1.0.4"
+    "@google-cloud/translate": "^6.1.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "googleapis": "^67.0.0",
+    "if-env": "^1.0.4",
+    "node-google-translate-skidz": "^1.1.2",
+    "query-string": "^6.13.8",
+    "request": "^2.88.2",
+    "url-parse": "^1.4.7"
   }
 }
