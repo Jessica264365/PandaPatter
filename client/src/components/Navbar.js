@@ -2,11 +2,9 @@ import React from "react"
 
 function Navbar() {
     return(
-        render(
-            <div>
+            
                 <nav className="navbar navbar-expand-lg navbar-gray bg-dark">
     <div className="container">
-      {/* <!-- we gonna place user name (after log in) in THis plase --> */}
       <img src="./PandaPatterTwo.png" id="picture" /><a className="navbar-brand" id="icon"> Welcome to Panda Patter </a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
         aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,8 +16,8 @@ function Navbar() {
       </div>
     </div>
   </nav>
-            </div>
-        )
+            
+        
     )
 }
 

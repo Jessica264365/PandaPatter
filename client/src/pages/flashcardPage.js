@@ -1,6 +1,6 @@
 import React,  {useState} from "react";
 import Flashcards from "../components/Flashcards"
-
+import "../style/Main.css"
  
 // in out express server we need to create a model that looks like this
 function FlashcardPage(props) {
