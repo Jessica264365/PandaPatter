@@ -5,12 +5,12 @@ function Login() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const signInWithEmailAndPasswordHandler = 
-            (event,email, password) => {
-                event.preventDefault();
+            (e, email, password) => {
+                e.preventDefault();
     };
 
-      const onChangeHandler = (event) => {
-          const {name, value} = event.currentTarget;
+      const onChangeHandler = (e) => {
+          const {name, value} = e.currentTarget;
 
           if(name === 'userEmail') {
               setEmail(value);
@@ -22,7 +22,7 @@ function Login() {
     return (
         <div className="container" id="hidden">
         <main className="row" >
-            <div className="col-md-10" id="movieInfo">
+            <div className="col-md-10" id="login">
                 <form action="/login" method="POST">
                     <br />
                     <div>
@@ -38,7 +38,7 @@ function Login() {
                             <input type="password" value={password} className="form-control" id="userPassword" onChange={(e)=> onChangeHandler(e)} />
           </div>
                             <br />
-                            <button type="submit" onClick = {(event) => {signInWithEmailAndPasswordHandler(event, email, password)}}>Login</button>
+                            <button type="submit" onClick = {(e) => {signInWithEmailAndPasswordHandler(e, email, password)}}>Login</button>
                             <br /><br />
                             <a href="./register" >New user? Register here!</a>
         </form><br />
