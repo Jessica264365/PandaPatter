@@ -36,7 +36,7 @@ export const generateUserDocument = async (user, moreData) => {
       console.error("There was a problem creating the user document", err);
     }
   }
-  return generateUserDocument(user.uid);
+  return getUserDocument(user.uid);
 };
 // Return user data using getUserDocument
 const getUserDocument = async (uid) => {
