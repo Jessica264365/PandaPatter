@@ -1,6 +1,7 @@
 import React,  {useState} from "react";
 import Flashcards from "../components/Flashcards"
 import "../style/Main.css"
+import CardContainer from "../components/CardContainer"
  
 // in out express server we need to create a model that looks like this
 function FlashcardPage(props) {
@@ -11,7 +12,7 @@ function FlashcardPage(props) {
                points:0
             },
             back: {
-                word: "sensei",
+                word: "先生 sensei",
                 points:0
             },
             status: "front"
@@ -22,7 +23,7 @@ function FlashcardPage(props) {
                points:0
             },
             back: {
-                word: "ringo",
+                word: "林檎 ringo",
                 points:0
             },
             status: "front"
@@ -33,7 +34,73 @@ function FlashcardPage(props) {
                points:0
             },
             back: {
-                word: "nihon",
+                word: "日本 nihon",
+                points:0
+            },
+            status: "front"
+        }, 
+        {
+            front: {
+               word: "train",
+               points:0
+            },
+            back: {
+                word: "列車 Ressha",
+                points:0
+            },
+            status: "front"
+        }, 
+        {
+            front: {
+               word: "river",
+               points:0
+            },
+            back: {
+                word: "川 kawa",
+                points:0
+            },
+            status: "front"
+        }, 
+        {
+            front: {
+               word: "bear",
+               points:0
+            },
+            back: {
+                word: "熊 kuma",
+                points:0
+            },
+            status: "front"
+        }, 
+        {
+            front: {
+               word: "forest",
+               points:0
+            },
+            back: {
+                word: "森林 shinrin",
+                points:0
+            },
+            status: "front"
+        }, 
+        {
+            front: {
+               word: "fish",
+               points:0
+            },
+            back: {
+                word: "魚 sakana",
+                points:0
+            },
+            status: "front"
+        }, 
+        {
+            front: {
+               word: "flower",
+               points:0
+            },
+            back: {
+                word: "花 hana",
                 points:0
             },
             status: "front"
@@ -56,7 +123,9 @@ function FlashcardPage(props) {
    } 
  return (
      <div>  
+         
          <Flashcards flashcards={flashcards} handleClick={handleClick} />
+         
      </div>
  )
 }

@@ -14,7 +14,7 @@ function App() {
   return   (
     <Router>
       <div>
-        <Navbar />
+      <Navbar />
       <Route exact path = "/translate" component={Translate} />
       <Route path ="/flashcard" component={Flashcard}/>
       <Route exact path = "/" component={Login}/>
