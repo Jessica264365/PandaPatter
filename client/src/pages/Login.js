@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { auth } from "../firebase";
 import "../style/Main.css";
 function Login() {
   const [email, setEmail] = useState("");
@@ -6,6 +7,10 @@ function Login() {
   const [error, setError] = useState(null);
   const signInWithEmailAndPasswordHandler = (e, email, password) => {
     e.preventDefault();
+    auth.signInWithEmailAndPassword(email, password).catch((error) => {
+      setError("Could not sign in with password and email");
+      console.error("Could not sign in with password and email", error);
+    });
   };
 
   const onChangeHandler = (e) => {

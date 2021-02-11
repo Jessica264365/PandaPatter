@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { auth, generateUserDocument } from "../firebase";
 import "../style/Main.css";
 function Register() {
   // set the state for the user variables
@@ -8,8 +9,17 @@ function Register() {
   const [error, setError] = useState(null);
 
   // When the button is clicked the user state is updated
-  const createUserHandler = (e, email, password) => {
+  const createUserHandler = async (e, email, password) => {
     e.preventDefault();
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      generateUserDocument(user, { displayName });
+    } catch (err) {
+      setError("Error signing up with email and password");
+    }
     setEmail("");
     setPassword("");
     setDisplayName("");
