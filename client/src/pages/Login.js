@@ -33,6 +33,7 @@ function Login() {
             </div>
             <div>
               <input
+                name="userEmail"
                 type="userEmail"
                 value={email}
                 className="form-control"
@@ -47,6 +48,7 @@ function Login() {
             </div>
             <div>
               <input
+                name="userPassword"
                 type="password"
                 value={password}
                 className="form-control"
