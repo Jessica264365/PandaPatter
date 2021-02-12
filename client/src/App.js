@@ -20,8 +20,6 @@ function App() {
 
           <Route exact path="/translate" component={Translate} />
           <Route path="/flashcard" component={Flashcard} />
-          <Route path="/flashcard" component={DeckContainer} />
-          <Route path="/flashcard" component={CardContainer} />
           <Route exact path="/" component={Login} />
           <Route exact path="/register" component={Register} />
         </div>
