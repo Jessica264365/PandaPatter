@@ -25,6 +25,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "google-translate": "3.0.0",
     "googleapis": "^67.0.0",
     "if-env": "^1.0.4",
     "node-google-translate-skidz": "^1.1.2",

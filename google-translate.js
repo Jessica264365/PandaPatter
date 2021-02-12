@@ -1,13 +1,8 @@
-const express = require("express");
-const app = express();
-const port = 3000;
-const { google } = require("googleapis");
-const request = require("request");
-const cors = require("cors");
-const urlParse = require("url-parse");
-const queryParse = require("query-string");
-const bodyParser
+var api = "AIzaSyDW5phlgsH3NLEuMZeJqM6-JXz0KJrpLkY";
+var googleTranslate = require("google-translate")(api);
 
-app.get("/", (req, res) => res.send("Hello World!"));
-
-app.listen(port, () => console.log(`Example app listening on port ${port}`));
+var text = "I love cats."
+console.log("English: ",text);
+googleTranslate.translate(text, "ja", function(err, translation) {
+  console.log("Translation: ",translation.translatedText);
+});
