@@ -299,3 +299,43 @@ body {
     color: yellow;
     background-color: gray;
   }
+  .nav-link{
+
+    color: rgb(70, 163, 175) !important;
+  }
+  .nav-link :hover{
+    color: rgb(235, 252, 6);
+  }
+  #panda1{
+    height: 100px;
+    width: 300px;
+    position: fixed;
+    margin-left: 33%;
+    /* margin-left: 65%; */
+
+  
+  }
+  #icon:hover {
+    transition-delay: 600ms;
+    color:#f4f7f2;
+    text-shadow: 2px 4px 8px #cdf005;
+  }
+  #DeckContainer{
+
+    height: 500px;
+    width: 250px;
+    margin-left: 7%;
+    background-color: rgba(199, 190, 190, 0.377);
+  }
+  #choosenLangauge{
+    margin-top: 15%;
+    margin-left: 1rem;
+  }
+  #CardContainer{
+    height: 500px;
+    width: 250px;
+    margin-left: 50%;
+    margin-right: 7%;
+    background-color: rgba(199, 190, 190, 0.377);
+    position: relative
+  }
