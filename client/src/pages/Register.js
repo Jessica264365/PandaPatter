@@ -5,7 +5,7 @@ function Register() {
         <div>
         <div className="container" id="hidden">
             <main className="row">
-              <div className="col-md-10" id="movieInfo">
+              <div className="col-md-10">
                 <h4>Register</h4>
                 <form action="/register" method="POST">
                   <div>

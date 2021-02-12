@@ -1,24 +1,39 @@
 import React from "react"
+import "../style/Main.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Navbar() {
     return(
-            
-                <nav className="navbar navbar-expand-lg navbar-gray bg-dark">
+      <div>
+          <nav className="navbar navbar-expand-lg navbar-gray bg-dark"> 
     <div className="container">
-      <img src="./PandaPatterTwo.png" id="picture" /><a className="navbar-brand" id="icon"> Welcome to Panda Patter </a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+    <a className="navbar-brand" id="icon"> Welcome to Panda Patter </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/translate"><b>Translate Page</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/"><b>Logout</b></a>
+          </li>
+          <li class="nav-item">
+           
+            <a class="nav-link" href="/register"><b>Sign up</b></a>
+          </li>
+          <li class="nav-item">
+           
+            <a class="nav-link" href="/AboutUs"><b>About us</b></a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-            
+     <img id="panda1" src="https://milkandcookies.studio/wp-content/uploads/2020/07/panda-02.png" alt="Panda" /></div>       
         
     )
 }
 
-export default Navbar
+export default Navbar;

@@ -4,7 +4,7 @@ function Login() {
     return (
         <div className="container" id="hidden">
         <main className="row" >
-            <div className="col-md-10" id="movieInfo">
+            <div className="col-md-10" >
                 <form action="/login" method="POST">
                     <br />
                     <div>
