@@ -6,29 +6,30 @@ function Flashcards(props) {
 
 
         //    cards
-        <div class="card-deck">
+        <div className="card-deck row">
             {props.flashcards.map((card, i) => {
                    
 console.log(card)
                 return (
-                    card.status === "front" ? (<div class="card" onClick={() => props.handleClick(card, i)}>
-                        <div class="card-body">
-                            <h5 class="card-title">{card.front.word}</h5>
+                    <div className ="col-md-4">
+                   { card.status === "front" ? (<div className="card" onClick={() => props.handleClick(card, i)}>
+                        <div className="card-body">
+                            <h5 className="card-title">{card.front.word}</h5>
 
-                            <p class="card-text"><small class="text-muted"> {card.front.points}</small></p>
+                            <p className="card-text"><small className="text-muted"> {card.front.points}</small></p>
                         </div>
                     </div>
                     ) : (
-                            <div class="card" onClick={() => props.handleClick(card, i)}>
-                                <div class="card-body">
-                                    <h5 class="card-title">{card.back.word}</h5>
+                            <div className="card" onClick={() => props.handleClick(card, i)}>
+                                <div className="card-body">
+                                    <h5 className="card-title">{card.back.word}</h5>
 
-                                    <p class="card-text"><small class="text-muted"> {card.back.points}</small></p>
+                                    <p className="card-text"><small className="text-muted"> {card.back.points}</small></p>
                                 </div>
                             </div>
 
-                        )
-                
+                        )}
+                </div>
 
                 )
             })}
