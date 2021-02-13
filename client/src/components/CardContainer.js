@@ -8,12 +8,12 @@ function CardContainer(props){
   return (
 
     
-       <div className="row">
-        <div className="col-md-12" id="CardContainer"> <br />
+       
+        <div className="col-md-9" id="CardContainer"> <br />
         <Flashcards flashcards={props.flashcards} handleClick={props.handleClick} />
         </div>
 
-       </div>
+       
 
     
   )}

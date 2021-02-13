@@ -5,9 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function DeckContainer() {
     return (
 
-        <div className="row" id="DeckContainer">
-            {/* <main className="row"> */}
-                <div className="col-sm-3" ><br />
+       
+            
+                <div className="col-md-3" id="DeckContainer" ><br />
                     <select className="form-select" aria-label="Default select example" className="drop">
                         <option selected>translate: select Language </option>
                         <option value="1">Afrikaans</option>
@@ -110,9 +110,9 @@ function DeckContainer() {
                     
               
 
-            {/* </main> */}
+           
 
-        </div>)
+        )
 }
 
 export default DeckContainer;
