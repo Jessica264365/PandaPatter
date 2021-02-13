@@ -2,6 +2,7 @@ import React,  {useState} from "react";
 import Flashcards from "../components/Flashcards"
 import "../style/Main.css"
 import CardContainer from "../components/CardContainer"
+import DeckContainer from "../components/DeckContainer"
  
 // in out express server we need to create a model that looks like this
 function FlashcardPage(props) {
@@ -122,10 +123,11 @@ function FlashcardPage(props) {
          setFlashcards(newFlashcard)
    } 
  return (
-     <div>  
-         
-         <Flashcards flashcards={flashcards} handleClick={handleClick} />
-         
+     <div className="container-fluid">
+         <div className="row">
+             <DeckContainer></DeckContainer>
+             <CardContainer flashcards={flashcards} handleClick={handleClick} />
+         </div>
      </div>
  )
 }
