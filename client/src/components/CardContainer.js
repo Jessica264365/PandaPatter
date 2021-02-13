@@ -7,16 +7,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function CardContainer(props){
   return (
 
-    <div className="container" id="CardContainer">
-        <main className="row">
-        <div className="col-md-4 offset-md-4">.col-md-4 .offset-md-4<br />
+    
+       <div className="row">
+        <div className="col-md-12" id="CardContainer"> <br />
         <Flashcards flashcards={props.flashcards} handleClick={props.handleClick} />
-            </div>
+        </div>
 
-        </main>
+       </div>
 
-    </div>)
-}
+    
+  )}
 
 
 export default CardContainer;

@@ -123,9 +123,11 @@ function FlashcardPage(props) {
          setFlashcards(newFlashcard)
    } 
  return (
-     <div>  
-         <DeckContainer></DeckContainer>
-         <CardContainer flashcards={flashcards} handleClick={handleClick} />
+     <div className="container-fluid">
+         <div className="row">
+             <DeckContainer></DeckContainer>
+             <CardContainer flashcards={flashcards} handleClick={handleClick} />
+         </div>
      </div>
  )
 }
