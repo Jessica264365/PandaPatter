@@ -212,9 +212,12 @@ function Translate() {
             <main className="row">
                 <div className="col-md-6">
                     <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" />
+                    
                 </div>
                 <div className="col-md-6">
-                    <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" />
+                    <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" /> 
+                    <button
+                            id="go2">Save!</button>
                 </div>
             </main>
         </div>

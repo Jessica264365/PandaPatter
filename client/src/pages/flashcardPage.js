@@ -132,4 +132,4 @@ function FlashcardPage(props) {
  )
 }
 
-export default FlashcardPage
+export default FlashcardPage;
