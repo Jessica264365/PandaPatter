@@ -16,8 +16,10 @@ function Register() {
         email,
         password
       );
+      console.log(user);
       generateUserDocument(user, { displayName });
     } catch (err) {
+      console.log(err);
       setError("Error signing up with email and password");
     }
     setEmail("");

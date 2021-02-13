@@ -21,7 +21,7 @@ export const firestore = firebase.firestore();
 export const generateUserDocument = async (user, moreData) => {
   // Check to see if there is user data.
   if (!user) return;
-  const userRef = firestore.doc("users/${user.uid}");
+  const userRef = firestore.doc(`users/${user.uid}`);
   const getCurrentContent = await userRef.get();
   if (!getCurrentContent.exists) {
     // If user data isn't present we want to write some
@@ -51,3 +51,12 @@ const getUserDocument = async (uid) => {
     console.error("Could not fetch the user", err);
   }
 };
+// Original rules for FireStore
+// service cloud.firestore {
+//   match /databases/{database}/documents {
+//     match /{document=**} {
+//       allow read, write: if
+//           request.time < timestamp.date(2021, 3, 11);
+//     }
+//   }
+// }
