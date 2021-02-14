@@ -11,7 +11,7 @@ function Flashcards(props) {
                    
 console.log(card)
                 return (
-                    <div className ="col-md-4">
+                    <div className ="col-md-4 my-4" id="DisplayedCards">
                    { card.status === "front" ? (<div className="card" onClick={() => props.handleClick(card, i)}>
                         <div className="card-body">
                             <h5 className="card-title">{card.front.word}</h5>

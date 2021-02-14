@@ -9,7 +9,7 @@ function CardContainer(props){
 
     
        
-        <div className="col-md-9" id="CardContainer"> <br />
+        <div className="col-md-9"  id="CardContainer"> <br />
         <Flashcards flashcards={props.flashcards} handleClick={props.handleClick} />
         </div>
 
