@@ -13,20 +13,34 @@ import CardContainer from "./components/CardContainer";
 import ProtectedRoute from "./protectedRoute";
 
 function App() {
+  // return (
   return (
     <UserProvider>
       <Router>
         <div>
           <Navbar />
 
+          <Route exact path="/translate" component={Translate} />
+          <Route path="/flashcard" component={Flashcard} />
           <Route exact path="/" component={Login} />
           <Route exact path="/register" component={Register} />
-          <ProtectedRoute path={Translate} redirectTo={Login} />
-          <ProtectedRoute path={Flashcard} redirectTo={Login} />
         </div>
       </Router>
     </UserProvider>
   );
+  //   <UserProvider>
+  //     <Router>
+  //       <div>
+  //         <Navbar />
+
+  //         <Route exact path="/" component={Login} />
+  //         <Route exact path="/register" component={Register} />
+  //         <ProtectedRoute path={Translate} redirectTo={Login} />
+  //         <ProtectedRoute path={Flashcard} redirectTo={Login} />
+  //       </div>
+  //     </Router>
+  //   </UserProvider>
+  // );
 }
 
 export default App;
