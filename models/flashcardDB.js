@@ -1,16 +1,26 @@
 const mongoose = require('mongoose');
 
 const FlashCardSchema = new mongoose.Schema({
-    language: {
+    InputLanguage: {
         type: String,
-        default: '',
+        default: ''
       },
-      FlashCard: 
+      OutputLanguage: {
+        type: String,
+        default: ''
+      },
+      Front: 
         {
-          type: Input,
+          type: String,
           trim: true,
           default:'' 
         },  
+        Back: 
+        {
+          type: String,
+          trim: true,
+          default:'' 
+        }
 });
 
 const FlashCard = mongoose.model('FlashCard', FlashCardSchema);

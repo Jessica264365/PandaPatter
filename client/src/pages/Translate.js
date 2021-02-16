@@ -1,11 +1,33 @@
 import React, { useState } from "react"
 import "../style/Main.css"
+import api from "../utils/api"
 function Translate() {
+  
+    const [flashcards, setFlashcards]=useState({
+        InputLanguage:"",
+        OutputLanguage:"",
+        Front:"",
+        Back:""
+    })
+
+    const handleInputChange=event =>{
+        const {name,value} = event.target
+        setFlashcards({
+            ...flashcards,
+            [name]:value
+        })
+    }
+   const handleSubmit=event =>{
+       console.log(flashcards)
+       api.saveFlashcards(flashcards).then(function(results){
+           console.log(results)
+       })
+   }    
     return (<div>
         <div className="container" id="hidden">
             <main className="row">
                 <div className="col-md-6"><br />
-                    <select className="form-select" aria-label="Default select example" className="drop">
+                    <select className="form-select drop" aria-label="Default select example" name="InputLanguage" onChange={handleInputChange}  >
                         <option selected>translate: select Language </option>
                         <option value="1">Afrikaans</option>
                         <option value="2">Albanian</option>
@@ -101,12 +123,12 @@ function Translate() {
 
                     </select>
                     <div>
-                        <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40"/><button
+                        <input type="text" id="Name" name="Front" value={flashcards.front} onChange={handleInputChange} required minlength="0" maxlength="100" size="40"/><button
                             id="go">translate</button>
                     </div>
                 </div>
                 <div className="col-md-6"><br />
-                    <select className="form-select" aria-label="Default select example" className="drop">
+                    <select className="form-select drop" aria-label="Default select example" name="OutputLanguage" onChange={handleInputChange} >
                         <option selected>to: select Language </option>
                         <option value="1">Afrikaans</option>
                         <option value="2">Albanian</option>
@@ -203,7 +225,7 @@ function Translate() {
                     </select>
 
                     <div>
-                        <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" />
+                        <input type="text" id="Name" name="Back" value={flashcards.Back} onChange={handleInputChange} required minlength="0" maxlength="100" size="40" />
                     </div>
                 </div>
             </main>
@@ -216,7 +238,7 @@ function Translate() {
                 </div>
                 <div className="col-md-6">
                     <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" /> 
-                    <button
+                    <button onClick={handleSubmit}
                             id="go2">Save!</button>
                 </div>
             </main>
