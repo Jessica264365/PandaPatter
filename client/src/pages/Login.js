@@ -11,6 +11,7 @@ function Login() {
       setError("Could not sign in with password and email");
       console.error("Could not sign in with password and email", error);
     });
+    
   };
 
   const onChangeHandler = (e) => {
@@ -78,3 +79,4 @@ function Login() {
 }
 
 export default Login;
+
