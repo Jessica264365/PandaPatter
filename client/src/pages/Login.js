@@ -24,7 +24,8 @@ function Login() {
     }
   };
   return (
-    <div className="container" id="hidden">
+    
+    <div  className="container-fluid" className="container" id="hidden">
       <main className="row">
         <div className="col-md-10" id="login">
           <form action="/login" method="POST">

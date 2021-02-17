@@ -1,23 +1,8 @@
 {
-  "name": "mern",
+  "name": "pandapatter",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "## About This Boilerplate",
   "main": "server.js",
-  "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.19.4"
-  },
   "dependencies": {
     "@google-cloud/translate": "^6.1.0",
     "axios": "^0.21.1",
@@ -39,5 +24,28 @@
     "react-router-dom": "^5.2.0",
     "request": "^2.88.2",
     "url-parse": "^1.4.7"
-  }
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jessica264365/PandaPatter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jessica264365/PandaPatter/issues"
+  },
+  "homepage": "https://github.com/Jessica264365/PandaPatter#readme"
 }
