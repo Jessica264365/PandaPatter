@@ -11,6 +11,7 @@ function Login() {
       setError("Could not sign in with password and email");
       console.error("Could not sign in with password and email", error);
     });
+    
   };
 
   const onChangeHandler = (e) => {
@@ -23,7 +24,8 @@ function Login() {
     }
   };
   return (
-    <div className="container" id="hidden">
+    
+    <div  className="container-fluid" className="container" id="hidden">
       <main className="row">
         <div className="col-md-10" id="login">
           <form action="/login" method="POST">
@@ -77,3 +79,4 @@ function Login() {
 }
 
 export default Login;
+
