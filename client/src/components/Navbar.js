@@ -32,6 +32,11 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="/Flashcard">
+                  <b>Flashcards</b>
+                </a>
+              </li>
+              <li className="nav-item">
                 <a
                   className="nav-link"
                   href="/"
