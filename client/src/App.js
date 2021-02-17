@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import DeckContainer from "./components/DeckContainer";
 import CardContainer from "./components/CardContainer";
 import ProtectedRoute from "./protectedRoute";
+import Switch from "react-bootstrap/esm/Switch";
 
 function App() {
   return (
@@ -18,29 +19,23 @@ function App() {
       <Router>
         <div>
           <Navbar />
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <ProtectedRoute path="/translate" component={Translate} />
 
-          <Route exact path="/translate" component={Translate} />
-          <Route path="/flashcard" component={Flashcard} />
-          <Route exact path="/" component={Login} />
-          <Route exact path="/register" component={Register} />
+            {/* <ProtectedRoute path="/translate">
+              <Translate />
+            </ProtectedRoute>
+
+            <ProtectedRoute path="/flashcard">
+              <Flashcard />
+            </ProtectedRoute> */}
+          </Switch>
         </div>
       </Router>
     </UserProvider>
   );
-  // return (
-  //   <UserProvider>
-  //     <Router>
-  //       <div>
-  //         <Navbar />
-
-  //         <Route exact path="/" component={Login} />
-  //         <Route exact path="/register" component={Register} />
-  //         <ProtectedRoute path={Translate} redirectTo={Login} />
-  //         <ProtectedRoute path={Flashcard} redirectTo={Login} />
-  //       </div>
-  //     </Router>
-  //   </UserProvider>
-  // );
 }
 
 export default App;

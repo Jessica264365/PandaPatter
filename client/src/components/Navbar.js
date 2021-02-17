@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../style/Main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { auth } from "../firebase";
@@ -8,10 +9,10 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-gray bg-dark">
         <div className="container">
-          <a className="navbar-brand" id="icon">
+          <Link className="navbar-brand" id="icon" to="/">
             {" "}
             Welcome to Panda Patter{" "}
-          </a>
+          </Link>
           <button
             class="navbar-toggler"
             type="button"
@@ -26,9 +27,9 @@ function Navbar() {
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="/translate">
+                <Link class="nav-link" to="/translate">
                   <b>Translate Page</b>
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <a

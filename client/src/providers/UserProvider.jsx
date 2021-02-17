@@ -1,25 +1,32 @@
-import React, { Component, createContext } from "react";
+import React, { Component, createContext, useEffect, useState } from "react";
 import { auth, generateUserDocument } from "../firebase";
+import firebase from "firebase/app";
 
 export const UserContext = createContext({ user: null });
-class UserProvider extends Component {
-  state = {
-    user: null,
-  };
-
-  componentDidMount = () => {
-    auth.onAuthStateChanged(async (userAuth) => {
-      const user = await generateUserDocument(userAuth);
-      this.setState({ user: userAuth });
+function UserProvider(props) {
+  const [user, setUser] = useState();
+  const [isReady, setisReady] = useState(false);
+  useEffect(() => {
+    console.log("Waiting for update");
+    auth.onAuthStateChanged((userAuth) => {
+      console.log("In UserContext", userAuth);
+      setUser(userAuth);
     });
-  };
-  render() {
-    return (
-      <UserContext.Provider value={this.state.user}>
-        {this.props.children}
-      </UserContext.Provider>
-    );
-  }
+  }, []);
+  useEffect(() => {
+    if (typeof user !== "undefined") {
+      setisReady(true);
+    }
+  }, [user]);
+  return (
+    <>
+      {isReady && (
+        <UserContext.Provider value={user}>
+          {props.children}
+        </UserContext.Provider>
+      )}
+    </>
+  );
 }
 
 export default UserProvider;
