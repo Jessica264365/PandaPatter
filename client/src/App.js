@@ -1,5 +1,4 @@
 import React from "react";
-// import Flashcards from "./components/Flashcards";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Flashcard from "./pages/flashcardPage";
 import Login from "./pages/Login";
@@ -23,14 +22,7 @@ function App() {
             <Route exact path="/" component={Login} />
             <Route exact path="/register" component={Register} />
             <ProtectedRoute path="/translate" component={Translate} />
-
-            {/* <ProtectedRoute path="/translate">
-              <Translate />
-            </ProtectedRoute>
-
-            <ProtectedRoute path="/flashcard">
-              <Flashcard />
-            </ProtectedRoute> */}
+            <ProtectedRoute path="/flashcard" component={Flashcard} />
           </Switch>
         </div>
       </Router>

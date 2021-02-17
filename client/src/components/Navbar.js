@@ -14,7 +14,7 @@ function Navbar() {
             Welcome to Panda Patter{" "}
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarToggleExternalContent"
@@ -22,18 +22,18 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-              <li class="nav-item">
-                <Link class="nav-link" to="/translate">
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link" to="/translate">
                   <b>Translate Page</b>
                 </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a
-                  class="nav-link"
+                  className="nav-link"
                   href="/"
                   onClick={() => {
                     auth.signOut();
@@ -42,13 +42,13 @@ function Navbar() {
                   <b>Logout</b>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/register">
+              <li className="nav-item">
+                <a className="nav-link" href="/register">
                   <b>Sign up</b>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/AboutUs">
+              <li className="nav-item">
+                <a className="nav-link" href="/AboutUs">
                   <b>About us</b>
                 </a>
               </li>
