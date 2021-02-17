@@ -13,7 +13,6 @@ import CardContainer from "./components/CardContainer";
 import ProtectedRoute from "./protectedRoute";
 
 function App() {
-  // return (
   return (
     <UserProvider>
       <Router>
@@ -28,6 +27,7 @@ function App() {
       </Router>
     </UserProvider>
   );
+  // return (
   //   <UserProvider>
   //     <Router>
   //       <div>
