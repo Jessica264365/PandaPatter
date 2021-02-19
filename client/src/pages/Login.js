@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { auth } from "../firebase";
 import "../style/Main.css";
 function Login() {
@@ -11,7 +12,6 @@ function Login() {
       setError("Could not sign in with password and email");
       console.error("Could not sign in with password and email", error);
     });
-    
   };
 
   const onChangeHandler = (e) => {
@@ -24,7 +24,7 @@ function Login() {
     }
   };
   return (
-    <div className="container" id="hidden">
+    <div className="container-fluid" className="container" id="hidden">
       <main className="row">
         <div className="col-md-10" id="login">
           <form action="/login" method="POST">
@@ -68,7 +68,7 @@ function Login() {
             </button>
             <br />
             <br />
-            <a href="./register">New user? Register here!</a>
+            <Link to="/register">New user? Register here! </Link>
           </form>
           <br />
         </div>
@@ -78,4 +78,3 @@ function Login() {
 }
 
 export default Login;
-

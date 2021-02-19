@@ -1,5 +1,4 @@
 import React from "react";
-// import Flashcards from "./components/Flashcards";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Flashcard from "./pages/flashcardPage";
 import Login from "./pages/Login";
@@ -11,36 +10,24 @@ import Navbar from "./components/Navbar";
 import DeckContainer from "./components/DeckContainer";
 import CardContainer from "./components/CardContainer";
 import ProtectedRoute from "./protectedRoute";
+import Switch from "react-bootstrap/esm/Switch";
 
 function App() {
-  // return (
   return (
     <UserProvider>
       <Router>
         <div>
           <Navbar />
-
-          <Route exact path="/translate" component={Translate} />
-          <Route path="/flashcard" component={Flashcard} />
-          <Route exact path="/" component={Login} />
-          <Route exact path="/register" component={Register} />
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <ProtectedRoute path="/translate" component={Translate} />
+            <ProtectedRoute path="/flashcard" component={Flashcard} />
+          </Switch>
         </div>
       </Router>
     </UserProvider>
   );
-  //   <UserProvider>
-  //     <Router>
-  //       <div>
-  //         <Navbar />
-
-  //         <Route exact path="/" component={Login} />
-  //         <Route exact path="/register" component={Register} />
-  //         <ProtectedRoute path={Translate} redirectTo={Login} />
-  //         <ProtectedRoute path={Flashcard} redirectTo={Login} />
-  //       </div>
-  //     </Router>
-  //   </UserProvider>
-  // );
 }
 
 export default App;

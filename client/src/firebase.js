@@ -42,7 +42,7 @@ export const generateUserDocument = async (user, moreData) => {
 const getUserDocument = async (uid) => {
   if (!uid) return null;
   try {
-    const userDoc = await firestore.doc("users/${uid}").get();
+    const userDoc = await firestore.doc(`users/${uid}`).get();
     return {
       uid,
       ...userDoc.data(),
