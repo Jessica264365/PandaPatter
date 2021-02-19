@@ -16,7 +16,7 @@ function UserProvider(props) {
   }, []);
   useEffect(() => {
     if (typeof user !== "undefined") {
-      setisReady(true);
+      setisReady(true); 
     } else if (typeof user === "undefined") {
       setUser(null);
     }
