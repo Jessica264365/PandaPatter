@@ -5,9 +5,13 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "axios": "0.21.1",
+    "bootstrap": "4.6.0",
     "firebase": "^8.2.7",
+    "google-translate": "3.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.3",
+    "react-cookies": "0.1.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
