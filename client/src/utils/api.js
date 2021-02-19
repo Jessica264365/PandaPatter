@@ -1,10 +1,6 @@
-import axios from "axios"
+// require("dotenv").config();
+//const apiKey = process.env.API_KEY;
 
-export default{
-    getFlashcards: function(){
-        return axios.get("/api/flashcards")
-    },
-    saveFlashcards: function(flashcards){
-        return axios.post("/api/flashcards",flashcards)
-    }
-}
+const API_KEY='AIzaSyBJMEVDUVn3P5PHmcnBUdrdNOpd4AU0R0o'
+
+export const googleTranslate = require("google-translate")(API_KEY);
