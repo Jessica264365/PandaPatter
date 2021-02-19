@@ -89,13 +89,13 @@ function Register() {
                 />
               </div>
               <br />
-              <button
+              <button 
                 type="submit"
                 onClick={(e) => {
                   createUserHandler(e, email, password);
                 }}
               >
-                Register
+                Register 
               </button>
               <br />
               <hr />
