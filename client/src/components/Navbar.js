@@ -57,6 +57,12 @@ function Navbar() {
                   <b>About us</b>
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/AboutUs">
+                  <b>.....</b>
+                </Link>
+              </li>
+              <i class="far fa-user"></i>
             </ul>
           </div>
         </div>
