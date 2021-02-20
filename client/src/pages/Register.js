@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { auth, generateUserDocument } from "../firebase";
+import { Link } from "react-router-dom";
 import "../style/Main.css";
 function Register() {
   // set the state for the user variables
@@ -100,7 +101,7 @@ function Register() {
               <br />
               <hr />
               <div>
-                <a href="./">Already have an account? click here to Login!</a>
+                <Link to="./">Already have an account? click here to Login!</Link>
               </div>
               <br />
             </form>
