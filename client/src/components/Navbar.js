@@ -32,7 +32,7 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Flashcard">
+                <Link className="nav-link" to="/flashcard">
                   <b>Flashcards</b>
                 </Link>
               </li>
@@ -48,14 +48,14 @@ function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/register">
+                <Link className="nav-link" to="/register">
                   <b>Sign up</b>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/AboutUs">
+                <Link className="nav-link" to="/AboutUs">
                   <b>About us</b>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
