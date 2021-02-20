@@ -1,17 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { auth } from "../firebase";
 import "../style/Main.css";
-function Login() {
+import { UserContext } from "../providers/UserProvider";
+import { auth, generateUserDocument } from "../firebase";
+function Login({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const signInWithEmailAndPasswordHandler = (e, email, password) => {
+  let { user, setUserData } = useContext(UserContext);
+
+  const signInWithEmailAndPasswordHandler = async (e, email, password) => {
     e.preventDefault();
-    auth.signInWithEmailAndPassword(email, password).catch((error) => {
+    try {
+      const userCred = await auth.signInWithEmailAndPassword(email, password);
+      const userFirebase = await generateUserDocument(userCred.user);
+      console.log(userFirebase);
+      setUserData(userFirebase);
+      history.push("/translate");
+    } catch (error) {
       setError("Could not sign in with password and email");
       console.error("Could not sign in with password and email", error);
-    });
+    }
   };
 
   const onChangeHandler = (e) => {
