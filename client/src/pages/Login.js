@@ -62,8 +62,11 @@ function Login() {
               type="submit"
               onClick={(e) => {
                 signInWithEmailAndPasswordHandler(e, email, password);
+                
               }}
+              
             >
+             
               Login
             </button>
             <br />

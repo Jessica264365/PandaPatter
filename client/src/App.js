@@ -12,6 +12,7 @@ import CardContainer from "./components/CardContainer";
 import ProtectedRoute from "./protectedRoute";
 import Switch from "react-bootstrap/esm/Switch";
 
+
 function App() {
   return (
     <UserProvider>
@@ -24,6 +25,7 @@ function App() {
             <ProtectedRoute path="/translate" component={Translate} />
             <ProtectedRoute path="/flashcard" component={Flashcard} />
           </Switch>
+          
         </div>
       </Router>
     </UserProvider>
