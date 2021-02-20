@@ -1,14 +1,18 @@
-import React, { useState } from "react"
-import "../style/Main.css"
-import api from "../utils/api"
-function Translate() {
+import "../style/Main.css";
+import api from "../utils/api";
+import React, { useContext, useState } from "react";
+import { UserContext } from "../providers/UserProvider";
 
-    const [flashcards, setFlashcards] = useState({
-        InputLanguage: "",
-        OutputLanguage: "",
-        Front: "",
-        Back: ""
-    })
+function Translate() {
+  const { user } = useContext(UserContext);
+  console.log(user.uid);
+  const [flashcards, setFlashcards] = useState({
+    InputLanguage: "",
+    OutputLanguage: "",
+    Front: "",
+    Back: "",
+    uid: user.uid,
+  });
 
     const handleInputChange = event => {
         const { name, value } = event.target
@@ -243,7 +247,6 @@ function Translate() {
             <main className="row">
                 <div className="col-md-6">
                     <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" />
-
                 </div>
                 <div className="col-md-6">
                     <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" />
