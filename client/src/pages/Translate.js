@@ -2,33 +2,33 @@ import React, { useState } from "react"
 import "../style/Main.css"
 import api from "../utils/api"
 function Translate() {
-  
-    const [flashcards, setFlashcards]=useState({
-        InputLanguage:"",
-        OutputLanguage:"",
-        Front:"",
-        Back:""
+
+    const [flashcards, setFlashcards] = useState({
+        InputLanguage: "",
+        OutputLanguage: "",
+        Front: "",
+        Back: ""
     })
 
-    const handleInputChange=event =>{
-        const {name,value} = event.target
+    const handleInputChange = event => {
+        const { name, value } = event.target
         setFlashcards({
             ...flashcards,
-            [name]:value
+            [name]: value
         })
     }
-   const handleSubmit=event =>{
-       console.log(flashcards)
-       api.saveFlashcards(flashcards).then(function(results){
-           console.log(results)
-       })
-   }    
+    const handleSubmit = event => {
+        console.log(flashcards)
+        api.saveFlashcards(flashcards).then(function (results) {
+            console.log(results)
+        })
+    }
     return (<div>
         <div className="container" id="hidden">
             <main className="row">
-                <div className="col-md-6"><br />
+                <div className="col-lg-6"><br />
                     <select className="form-select drop" aria-label="Default select example" name="InputLanguage" onChange={handleInputChange}  >
-                    <option selected>translate: select Language </option>
+                        <option selected>translate: select Language </option>
                         <option value="Afrikaans">Afrikaans</option>
                         <option value="Albanian">Albanian</option>
                         <option value="Arabic">Arabic</option>
@@ -123,13 +123,14 @@ function Translate() {
 
                     </select>
                     <div>
-                        <input type="text" id="Name" name="Front" value={flashcards.front} onChange={handleInputChange} required minlength="0" maxlength="100" size="40"/><button
+                        <input type="text" id="Name" name="Front" value={flashcards.front} onChange={handleInputChange} required minlength="0" maxlength="100" size="40" /><button
                             id="go">translate</button>
                     </div>
                 </div>
-                <div className="col-md-6"><br />
-                    <select className="form-select drop" aria-label="Default select example" name="OutputLanguage" onChange={handleInputChange} >
-                    <option selected>translate: select Language </option>
+                
+                <div className="col-lg-6"><br />
+                    <select className="form-select drop" aria-label="Default select example" name="OutputLanguage" onChange={handleInputChange} id="selection1">
+                        <option selected>translate: select Language </option>
                         <option value="Afrikaans">Afrikaans</option>
                         <option value="Albanian">Albanian</option>
                         <option value="Arabic">Arabic</option>
@@ -224,25 +225,33 @@ function Translate() {
 
                     </select>
 
-                    <div>
-                        <input type="text" id="Name" name="Back" value={flashcards.Back} onChange={handleInputChange} required minlength="0" maxlength="100" size="40" />
+                    <div className="col-md-6">
+                        <div>
+                        {/* <input type="text" id="Name" name="Back" value={flashcards.Back} onChange={handleInputChange} required minlength="0" maxlength="100" size="40" /> */}
+                        <h6 id="Name" id="translate" value={flashcards.Back} onChange={handleInputChange}>Translation</h6><button onClick={handleSubmit}
+                        id="go2"> Save Flashcard!</button></div>
                     </div>
+
                 </div>
+
             </main>
+                 <center>   </center> 
+                        <hr/>
+                        <br/>
         </div >
-        <div className="container" id="hidden">
+        {/* <div className="container" id="hidden">
             <main className="row">
                 <div className="col-md-6">
                     <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" />
-                    
+
                 </div>
                 <div className="col-md-6">
-                    <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" /> 
+                    <input type="text" id="Name" name="name" required minlength="0" maxlength="100" size="40" />
                     <button onClick={handleSubmit}
-                            id="go2">Save!</button>
+                        id="go2">Save!</button>
                 </div>
             </main>
-        </div>
+        </div> */}
 
     </div>
 
