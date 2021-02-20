@@ -229,7 +229,7 @@ function Translate() {
                         <div>
                         {/* <input type="text" id="Name" name="Back" value={flashcards.Back} onChange={handleInputChange} required minlength="0" maxlength="100" size="40" /> */}
                         <h6 id="Name" id="translate" value={flashcards.Back} onChange={handleInputChange}>Translation</h6><button onClick={handleSubmit}
-                        id="go2"> Save Flashcar!</button></div>
+                        id="go2"> Save Flashcard!</button></div>
                     </div>
 
                 </div>
