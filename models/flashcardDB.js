@@ -24,10 +24,10 @@ const FlashCardSchema = new mongoose.Schema({
     trim: true,
     default: "",
   },
-  status: {
-    type: String,
-    default: "front",
-  },
+  // status: {
+  //   type: String,
+  //   default: "front",
+  // },
 });
 
 const FlashCard = mongoose.model("FlashCard", FlashCardSchema);
