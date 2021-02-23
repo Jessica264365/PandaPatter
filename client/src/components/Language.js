@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import React from "react";
 import "../style/Main.css";
 import Card from "react-bootstrap/Card";
-import { Col, Row, Container } from "react-bootstrap";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Col, Row } from "react-bootstrap";
+import { Input, FormBtn } from "../components/Form";
 import { googleTranslate } from "../utils/API";
-import { language } from "googleapis/build/src/apis/language";
+// import { language } from "googleapis/build/src/apis/language";
 
 function Language() {
   const [inputLanguage, setinputLanguage] = useState("");
@@ -13,6 +13,7 @@ function Language() {
   const [outputLanguage, setOutputLanguage] = useState("");
   const [translateText, setTranslateText] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [languageName, setLanguageName] = useState("Language");
 
   // useEffect(() => {
   // //var inLang =
@@ -29,21 +30,33 @@ function Language() {
     });
   }, []);
 
+  // const langName = languageCodes.map((language) => {
+  //   return (
+  //     <div>{language.name}</div>
+  //   );
+  // });
+
   const languageList = languageCodes.map((language) => {
+
     return (
       <a
         className="dropdown-item"
-        onClick={() => langCode(language.language)}
+        onClick={() => langCode(language)}
         href="#"
       >
         {language.name}
+
       </a>
+
+
     );
   });
 
-  const langCode = (ln) => {
-    console.log("language", ln);
-    setSelectedLanguage(ln);
+
+    const langCode = (ln) => {
+    console.log("language", ln.name);
+    setSelectedLanguage(ln.language);
+    setLanguageName(ln.name);
   };
 
   console.log("select", selectedLanguage);
@@ -93,7 +106,7 @@ function Language() {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              languages
+             {languageName}
 
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
