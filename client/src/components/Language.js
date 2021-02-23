@@ -4,7 +4,7 @@ import "../style/Main.css";
 import Card from "react-bootstrap/Card";
 import { Col, Row } from "react-bootstrap";
 import { Input, FormBtn } from "../components/Form";
-import { googleTranslate } from "../utils/API";
+import { googleTranslate } from "../utils/API_KEY";
 // import { language } from "googleapis/build/src/apis/language";
 
 function Language() {
