@@ -18,7 +18,7 @@ function MultipleFlashcards(props) {
     retrieveFlashcards();
   }, []);
   // flashscards array is mapped through creating a new component for each individual flashcard
-  // Individual flashcard component is passed down a a prop.
+  // Individual flashcard is passed down a a prop.
   const flascardList = flashcards.map((flashcard) => (
     <SingleFlashcard flashcards={flashcard} />
   ));
