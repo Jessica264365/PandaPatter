@@ -2,23 +2,22 @@ import React, { useContext } from "react";
 import { Route, Redirect } from "react-router-dom";
 import { UserContext } from "./providers/UserProvider";
 const ProtectedRoute = ({ component: Component, ...rest }) => {
-  const authValue = useContext(UserContext);
-  console.log(authValue);
+  const { user } = useContext(UserContext);
   return (
     <Route
       {...rest}
       render={(props) => {
-        if (authValue) {
-          console.log("Here")
+        if (user) {
+          console.log("Here");
           return <Component {...rest} {...props} />;
         } else {
           return (
             <Redirect
               to={{
                 pathname: "/",
-                state: {
-                  from: props.location,
-                },
+                // state: {
+                //   from: props.location,
+                // },
               }}
             />
           );
@@ -28,4 +27,3 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
   );
 };
 export default ProtectedRoute;
-

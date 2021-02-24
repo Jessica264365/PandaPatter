@@ -197,6 +197,7 @@ body {
           background-size: cover;
           width: 100%;
           height: 162%;
+          margin-top: 6.48rem;
         }
         .w-100{
           height: 25rem;
@@ -285,6 +286,7 @@ body {
     border-radius: 0.3rem;
     margin: 3%;
     margin-left: auto;
+ 
   }
   .drop{
     margin-top: 2rem;
@@ -301,6 +303,7 @@ body {
   }
   #go2{
     /* padding: 0.5rem; */
+    padding: 1% 2% 1% 2%;
     background-color: rgb(82, 87, 84);
     border-radius: 00.5rem;
     color: #eeeeee;
@@ -319,9 +322,11 @@ body {
   #panda1{
     /* height: 150px;
     width: 300px; */
-    height: 16%;
-    position: fixed;
-    margin-left: 33%;
+    height: 15%;
+    /* height: 15rem;
+    width: 10rem; */
+    position: absolute;
+    margin-left: 39%;
 
   
   }
@@ -351,4 +356,25 @@ body {
     background-color: rgba(199, 190, 190, 0.377);
     position: relative
   }
+  #translate{
+    margin-top: 1rem;
+    color: rgb(179, 177, 174);
+    font-size: 20px;
+    background-color: #ffffff;
+    padding: 3.1rem 12rem 3rem 5rem;
+    height: 100%;
+   border-radius: .3rem;
+   /* margin-right: 37%; */
+   border-style: solid;
+   border-color: black;
+   border-width: 2px;
+    
+  }
+  /* #selection1{
+    margin-left: 3%;
+  } */
+
+
+  /* ............ */
+
 
