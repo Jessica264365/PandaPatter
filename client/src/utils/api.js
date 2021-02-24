@@ -1,10 +1,10 @@
-import axios from "axios"
+import axios from "axios";
 
-export default{
-    getFlashcards: function(){
-        return axios.get("/api/flashcards")
-    },
-    saveFlashcards: function(flashcards){
-        return axios.post("/api/flashcards",flashcards)
-    }
-}
+export default {
+  getFlashcards: function (uid) {
+    return axios.get("/api/flashcards/" + uid);
+  },
+  saveFlashcards: function (flashcards) {
+    return axios.post("/api/flashcards", flashcards);
+  },
+};
