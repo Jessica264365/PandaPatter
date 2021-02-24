@@ -132,7 +132,7 @@ function FlashcardPage(props) {
   //     setFlashcards(newFlashcard);
   //   };
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="row">
         <DeckContainer></DeckContainer>
         <CardContainer />
