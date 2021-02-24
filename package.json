@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "## About This Boilerplate",
   "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@google-cloud/translate": "^6.1.0",
     "axios": "^0.21.1",
