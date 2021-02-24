@@ -1,8 +1,40 @@
 {
-  "name": "mern",
+  "name": "pandapatter",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "## About This Boilerplate",
   "main": "server.js",
+  "dependencies": {
+    "@google-cloud/translate": "^6.1.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "8.2.0",
+    "express": "^4.17.1",
+    "firebase": "^8.2.6",
+    "google-translate": "3.0.0",
+    "googleapis": "^67.0.0",
+    "if-env": "^1.0.4",
+    "inquirer": "7.3.3",
+    "mongoose": "^5.11.16",
+    "node-google-translate-skidz": "^1.1.2",
+    "query-string": "6.14.0",
+    "react": "^17.0.1",
+    "react-bootstrap": "1.5.0",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "request": "^2.88.2",
+    "url-parse": "^1.4.7"
+  },
+  "devDependencies": {
+    "bootstrap": "4.6.0",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "firebase": "^8.2.7",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.11.16",
+    "nodemon": "^2.0.7",
+    "react-router-dom": "^5.2.0"
+  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -14,14 +46,12 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jessica264365/PandaPatter.git"
   },
-  "dependencies": {
-    "bootstrap": "^4.6.0",
-    "express": "^4.16.3",
-    "if-env": "^1.0.4",
-    "react-router-dom": "^5.2.0"
-  }
+  "bugs": {
+    "url": "https://github.com/Jessica264365/PandaPatter/issues"
+  },
+  "homepage": "https://github.com/Jessica264365/PandaPatter#readme"
 }

@@ -1,41 +1,66 @@
-import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState, useContext } from "react";
+import Flashcards from "../components/Flashcards";
+import SingleFlashcard from "./SingleFlashcard";
+import api from "../utils/api";
+import { UserContext } from "../providers/UserProvider";
 
-function Flashcards(props) {
-    return (
+function MultipleFlashcards(props) {
+  const [flashcards, setFlashcards] = useState([]);
+  const { user } = useContext(UserContext);
 
+  const retrieveFlashcards = () => {
+    let uid = user.uid;
+    console.log(uid);
+    api.getFlashcards(uid).then((res) => {
+      console.log(res.data);
+      setFlashcards(res.data);
+    }).catch((error) => {
+      console.log(error)
+    }) 
+      
+    
+  };
 
-        //    cards
-        <div class="card-deck">
-            {props.flashcards.map((card, i) => {
-                   
-console.log(card)
-                return (
-                    card.status === "front" ? (<div class="card" onClick={() => props.handleClick(card, i)}>
-                        <div class="card-body">
-                            <h5 class="card-title">{card.front.word}</h5>
+  useEffect(() => {
+    retrieveFlashcards();
+  }, []);
+  // flashscards array is mapped through creating a new component for each individual flashcard
+  // Individual flashcard is passed down a a prop.
+  const flascardList = flashcards.map((flashcard) => (
+    <SingleFlashcard flashcards={flashcard} />
+  ));
 
-                            <p class="card-text"><small class="text-muted"> {card.front.points}</small></p>
-                        </div>
-                    </div>
-                    ) : (
-                            <div class="card" onClick={() => props.handleClick(card, i)}>
-                                <div class="card-body">
-                                    <h5 class="card-title">{card.back.word}</h5>
-
-                                    <p class="card-text"><small class="text-muted"> {card.back.points}</small></p>
-                                </div>
-                            </div>
-
-                        )
-                
-
-                )
-            })}
-
-
-
-        </div>
-    )
+  return <div className="card-deck row">{flascardList}</div>;
 }
+// example
+// ===================================================
+// NumberList = (props) => {
+//     const numbers = props.numbers; c
+//     const listItems = numbers.map((number) =>
+//       <ListItem key={number.toString()}
+//                 value={number} />
 
-export default Flashcards;
+//     );
+//     return (
+//       <ul>
+//         {listItems}
+//       </ul>
+//     );
+//   }
+// ======================================================
+//What we had
+// ======================================================
+// {flashcards.length > 0 &&
+//     flashcards.map((card, i) => {
+//       <SingleFlashcard handleClick={handleClick} flashcards={flashcards} />;
+//     })}
+
+// <div className="card-deck row">
+//   {props.flashcards.length > 0 && props.flashcards.map((card, i) => {
+//     console.log(card);
+//     return (<SingleFlashcard />)
+//   } )}
+// </div>)
+// ======================================================
+export default MultipleFlashcards;
