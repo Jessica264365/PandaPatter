@@ -5,6 +5,17 @@
 users can learn and memorise the foreign Work easier with having selected 2 sided flashcards with flipping them to see and memorise the words. front of Flashcards can be user language and back of the Flashcards is the language that user want to learn.
 # Technology Used:
 HTML,CSS, JavaScript, Jquery, Bootstrap codes, Node, Express, MongoDB(and Mongo Atlas), Mangoose, React, api,Axios, and FireBase(and Firestore)Also Heroku to depolyment.
+## gitHub repository link:
+https://github.com/Jessica264365/PandaPatter
+
+## Deployed link online:
+
+## Demo video link:
+
+## demo pictures:
+<img src="">
+<img src="">
+<img src="">
 
 ## Robert Swallow: (Back-End and Project Manager)
 Worked as a project Manager to help keep is communicating and on the same page throughout the process. worked on Javascript  to create the functionality of the flashcards, also worked on building and testing the database with Joe, and creating the logic to save new flashcards to our database.  Used technologies such as: Javascript, MongoDB, Mongoose, React.
@@ -42,5 +53,5 @@ Got help Online from :
 •   React
 •   MangoDB
 •   Mangoose
- Thanks to John Young team class instructor and Ben Vaagen my TA. special Thank to Dan Mont-Eton team TA , and our Tutors for helping us to understand the contents.
+ Thanks to John Young team class instructor also Ben Vaagen Team TA. special Thank to Dan Mont-Eton team TA , and our Tutors for helping us to understand the contents.
 
