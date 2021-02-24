@@ -1,5 +1,11 @@
 const router=require("express").Router()
-const db=require("../models")
+const flashcardController = require("../../controllers/flashcardController")
+
+
+// Matches with "/api/books"
+router.route("/")
+  .get(booksController.findAll)
+  .post(booksController.create);
 
 
 router.get("/api/flashcards",function(req,res){

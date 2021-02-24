@@ -1,14 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Flashcards from "../components/Flashcards";
 import SingleFlashcard from "./SingleFlashcard";
 import api from "../utils/api";
+import { UserContext } from "../providers/UserProvider";
 
 function MultipleFlashcards(props) {
   const [flashcards, setFlashcards] = useState([]);
+  const { user } = useContext(UserContext);
 
   const retrieveFlashcards = () => {
-    api.getFlashcards().then((res) => {
+    let uid = user.uid;
+    console.log(uid);
+    api.getFlashcards(uid).then((res) => {
       console.log(res.data);
       setFlashcards(res.data);
     });

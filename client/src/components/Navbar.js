@@ -24,7 +24,6 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-gray bg-dark">
         <div className="container">
           <Link className="navbar-brand" id="icon" to="/">
-            {" "}
             Welcome to Panda Patter {userName}
           </Link>
           <button
@@ -71,7 +70,6 @@ function Navbar() {
                   <b>About us</b>
                 </Link>
               </li>
-            
             </ul>
           </div>
         </div>
