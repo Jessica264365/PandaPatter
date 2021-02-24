@@ -15,7 +15,11 @@ function MultipleFlashcards(props) {
     api.getFlashcards(uid).then((res) => {
       console.log(res.data);
       setFlashcards(res.data);
-    });
+    }).catch((error) => {
+      console.log(error)
+    }) 
+      
+    
   };
 
   useEffect(() => {

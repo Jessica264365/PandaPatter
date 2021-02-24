@@ -1,24 +1,20 @@
-const router=require("express").Router()
-const flashcardController = require("../../controllers/flashcardController")
+const router = require("express").Router();
+const flashcardController = require("../../controllers/flashcardController");
 
+router.route("/:uid").get(flashcardController.findAll);
 
-// Matches with "/api/books"
-router.route("/")
-  .get(booksController.findAll)
-  .post(booksController.create);
+router.route("/").post(flashcardController.create);
 
+module.exports = router;
 
-router.get("/api/flashcards",function(req,res){
-    db.FlashCard.find().then(function(results){
-        res.json(results)
-    })
-})
+// router.get("/flashcards",function(req,res){
+//     db.FlashCard.find().then(function(results){
+//         res.json(results)
+//     })
+// })
 
-router.post("/api/flashcards", function(req,res){
-    db.FlashCard.create(req.body).then(function(results){
-        res.json(results)
-    })
-})
-
-
-module.exports=router
+// router.post("/api/flashcards", function(req,res){
+//     db.FlashCard.create(req.body).then(function(results){
+//         res.json(results)
+//     })
+// })
