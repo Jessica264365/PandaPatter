@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../style/Main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,24 +6,26 @@ import { auth } from "../firebase";
 import { UserContext } from "../providers/UserProvider";
 
 function Navbar() {
-  // const { user } = useContext(UserContext);
-  // const [isUser, setisUser] = useState(false);
+  const { user } = useContext(UserContext);
+  const [userName, setUserName] = useState("");
+  useEffect(() => {
+    checkForUser();
+  }, [user]);
+  function checkForUser() {
+    if (user === null) {
+      setUserName("");
+    } else {
+      setUserName(user.displayName);
+    }
+  }
 
-  // function checkForUser(user) {
-  //   if (typeof user !== "undefined") {
-  //     setisUser(true);
-  //   } else if (typeof user === "undefined") {
-  //     setisUser(true);
-  //   }
-  // }
-  // checkForUser(user);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-gray bg-dark">
         <div className="container">
           <Link className="navbar-brand" id="icon" to="/">
             {" "}
-            Welcome to Panda Patter{" "}
+            Welcome to Panda Patter {userName}
           </Link>
           <button
             className="navbar-toggler"
@@ -69,35 +71,7 @@ function Navbar() {
                   <b>About us</b>
                 </Link>
               </li>
-              <li className="nav-item">
-                        <Link className="nav-link" to="/AboutUs">
-                          <b>....</b>
-                        </Link>
-                      </li>
-              {/* <div>
-             
-                {(() => {
-                  if (!user.displayName) {
-                    return (
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/AboutUs">
-                          <b>Welcome</b>
-                        </Link>
-                      </li>
-                    );
-                  } else if (user.displayName === null) {
-                    return (
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/AboutUs">
-                          <b>{user.displayName}</b>
-                        </Link>
-                      </li>
-                    );
-                  }
-                })()}
-              </div> */}
-
-              <i class="far fa-user"></i>
+            
             </ul>
           </div>
         </div>
