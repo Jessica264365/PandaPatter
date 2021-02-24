@@ -34,7 +34,7 @@ function AboutUs() {
                 <input type="radio" name="slideSelectors" id="sl2" class="selectors" />
                 <div class="part2 slides">
                     <div class="attach">
-                        <h3>My name is Jessica Whiteman (Back-End) </h3>
+                        <h3>My name is Jessica Whitman (Back-End) </h3>
                         <h4> Worked on ... in this project</h4>
                         <p>I am a West Seattleite who loves dogs, absurdist fiction books, and
                         caffeine. I am a dedicated team player who is ready to dive right
