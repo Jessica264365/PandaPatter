@@ -8,8 +8,15 @@ import Language from "../components/Language";
 function Translate () {
 
   return (
-    <div>
+    <div className="container">
+      <div className="row">
+      <div className="col-md-6" id="CardContainer">
      <Language />
+     </div>
+     <div className="col-md-6" id="CardContainer">
+     <Language />
+     </div>
+     </div>
     </div>
   );
 
