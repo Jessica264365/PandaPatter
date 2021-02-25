@@ -6,13 +6,13 @@ body {
     margin: 5%;
     font-family: Georgia, Times, "Times New Roman", serif;
    background-color: #f5eeee5e;
-  
-    
+
+
   }
-  
+
   html {
-    
-    
+
+
     min-height: 100%;
     position: relative;
   }
@@ -23,7 +23,7 @@ body {
     margin-bottom: 2%;
     background-origin: padding-box;
     background-color: rgba(0, 0, 255, 0.075);
-    
+
   }
    #src1{
     width: 70%;
@@ -33,17 +33,17 @@ body {
    #src1 :focus {
     width: 100%;
   }
-  
+
   main {
     margin: 70px 0;
   }
-  
+
   .block {
     background-color: #fff;
     padding: 33px;
     /* margin-bottom: 35px; */
   }
-  
+
   .block-header {
     font-size: larger;
     color: #4aaaa5;
@@ -61,46 +61,46 @@ body {
   .navbar-default .navbar-nav > li > a:hover {
     color: #4aaaa5;
   }
-  
+
   .navbar {
     border: 2px;
     background: white;
-    
+
   }
-  
-  
+
+
     .navbar-header {
       background-color: #4aaaa4;
     }
-  
+
   .connect-header {
     font-size: 25px;
   }
-  
+
   .connect-photo {
     width: 55px;
     height: 55px;
   }
-  
+
   #images {
     padding-top: 15px;
     text-align: center;
   }
   /* End of contect*/
-  
+
   .footertext {
     margin-top: 15px;
     color: #eeeeee;
   }
-  
+
   .footerline {
-    
+
     height: 6px;
     padding-top: 3px;
     background-color: #4aaaa5;
   }
   /*  FOOTER ends here */
-  
+
   /* About page starts here  */
   .about-me-header {
     margin-bottom: 33px;
@@ -111,29 +111,29 @@ body {
   }
   /* floating my image to the left to have paragraph on the right  */
   #image {
-    
+
     float: left;
     width: 220px;
     margin: 0 30px 8px 0;
   }
   /*  About page ends*/
-  
-  
+
+
   /* portfolio */
   .port-image {
     margin: 20px auto;
   }
   /* end of Protfolio */
-  
-  
+
+
   .form-control {
     border-radius: 0;
     min-width: 100%;
     max-width: 100%;
   }
-  
+
   .submit {
-    
+
     padding: 20px 25px;
     font-size: 16px;
     font-weight: lighter;
@@ -141,14 +141,14 @@ body {
     background-color: #4aaaa5;
     border: 5px;
   }
-  
+
   .submit:hover{
     opacity: .9;
   }
-      
+
   h4{
     width: 300px;
-    
+
     }
         .sidebar {
           width: fit-content;
@@ -164,12 +164,12 @@ body {
           border: 1px solid #ddd;
           background: rgba(255, 255, 255, 0.26);
         }
-    
+
         .sidebar a:hover img {
           border: 3px solid #470a0a;
         }
-    
-    
+
+
         .social {
           position: relative;
           width: 50px;
@@ -181,7 +181,7 @@ body {
   height: 90%;
   border: 5px;
   border-color: #666;
-  
+
         }
         #container{
           background-color: rgba(53, 39, 245, 0.507);
@@ -211,7 +211,7 @@ body {
   }
   #white{
     color: rgb(255, 253, 253);
-    
+
   }
   #rating{
     margin-top: 8%;
@@ -229,14 +229,14 @@ body {
     font-size: 20px;
   }
   *****
-  
-  
+
+
   .search {
     width: 100%;
     position: relative;
     display: flex;
   }
-  
+
   .searchTerm {
     width: 80%;
     border: 3px solid #00B4CC;
@@ -247,11 +247,11 @@ body {
     outline: none;
     color: #9DBFAF;
   }
-  
+
   .searchTerm:focus{
     color: #00B4CC;
   }
-  
+
   .searchButton {
     width: 40px;
     height: 36px;
@@ -263,7 +263,7 @@ body {
     cursor: pointer;
     font-size: 20px;
   }
-  
+
   /*Resize the wrap to see the search bar change!*/
   .wrap{
     width: 30%;
@@ -274,7 +274,7 @@ body {
   }
   #register{
     margin-left: 2%;
-  } 
+  }
   #picture{
     height: 150px;
     width: 250px;
@@ -286,7 +286,7 @@ body {
     border-radius: 0.3rem;
     margin: 3%;
     margin-left: auto;
- 
+
   }
   .drop{
     margin-top: 2rem;
@@ -328,7 +328,7 @@ body {
     position: absolute;
     margin-left: 39%;
 
-  
+
   }
   #icon:hover {
     transition-delay: 600ms;
@@ -358,7 +358,7 @@ body {
   }
   #translate{
     margin-top: 1rem;
-    color: rgb(179, 177, 174);
+    color: #000000;
     font-size: 20px;
     background-color: #ffffff;
     padding: 3.1rem 12rem 3rem 5rem;
@@ -368,7 +368,7 @@ body {
    border-style: solid;
    border-color: black;
    border-width: 2px;
-    
+
   }
   /* #selection1{
     margin-left: 3%;
