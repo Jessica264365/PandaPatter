@@ -13,7 +13,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(apiRoutes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/panda", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -21,10 +20,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/panda", {
   useFindAndModify: false,
 });
 
-// Define API routes here
+// API Routes
+app.use(apiRoutes);
 
 // Send every other request to the React app
-// Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
