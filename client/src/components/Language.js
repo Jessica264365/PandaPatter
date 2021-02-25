@@ -12,10 +12,13 @@ function Language() {
   const [languageCodes, setLanguageCodes] = useState([]);
   const [outputLanguage, setOutputLanguage] = useState("");
   const [front, setFront] = useState("");
+  const [back, setBack] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [languageName, setLanguageName] = useState("Language");
   const { user } = useContext(UserContext);
   //console.log(user.uid);
+
+
   const [flashcards, setFlashcards] = useState({
     InputLanguage: "",
     OutputLanguage: "",
@@ -25,11 +28,13 @@ function Language() {
   });
 
   useEffect(() => {
-    googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
+    //Grabs Languages from google
+      googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
       setLanguageCodes(languageCodes);
     });
   }, []);
 
+  //creates language names for dropdown menu
   const languageList = languageCodes.map((language) => {
     return (
       <a className="dropdown-item" onClick={() => langCode(language)} href="#">
@@ -46,6 +51,7 @@ function Language() {
 
   //console.log("select", selectedLanguage);
 
+  //sets data to flashcard for database
   function handleInputChange(event) {
     const { name, value } = event.target;
 
@@ -54,9 +60,11 @@ function Language() {
       [name]: value,
     });
 
+    //sets front of flashcard
     setFront(value);
   }
 
+    //uses google to translate input word
   function handleFormSubmit(event) {
     //console.log("front", front);
     event.preventDefault();
@@ -69,6 +77,7 @@ function Language() {
     }
   }
 
+  //saves flashcard to database
   const handleSubmit = (event) => {
     console.log(flashcards);
     api.saveFlashcards(flashcards).then(function (results) {
@@ -93,6 +102,7 @@ function Language() {
               Translate
             </button>
 
+            {/* input word and adds flashcard value */}
             <input
               type="text"
               onChange={handleInputChange}
@@ -102,6 +112,7 @@ function Language() {
             />
           </div>
 
+          {/* dropdown menu */}
           <div className="col-lg-6">
             <br />
             <div className="dropdown">
@@ -123,11 +134,14 @@ function Language() {
               </div>
             </div>
 
+            {/* translated word */}
             <div>
               <p id="translate">{outputLanguage}</p>
             </div>
             <div>
               <br />
+
+              {/* save button */}
               <button onClick={handleSubmit} id="go2">
                 Save Flashcard!
               </button>
