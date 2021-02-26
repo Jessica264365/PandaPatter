@@ -71,11 +71,8 @@ function Login({ history }) {
               type="submit"
               onClick={(e) => {
                 signInWithEmailAndPasswordHandler(e, email, password);
-                
               }}
-              
             >
-             
               Login
             </button>
             <br />

@@ -90,18 +90,20 @@ function Register() {
                 />
               </div>
               <br />
-              <button 
+              <button
                 type="submit"
                 onClick={(e) => {
                   createUserHandler(e, email, password);
                 }}
               >
-                Register 
+                Register
               </button>
               <br />
               <hr />
               <div>
-                <Link to="./">Already have an account? click here to Login!</Link>
+                <Link to="./">
+                  Already have an account? click here to Login!
+                </Link>
               </div>
               <br />
             </form>

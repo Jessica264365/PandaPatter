@@ -18,7 +18,6 @@ function Language() {
   const { user } = useContext(UserContext);
   //console.log(user.uid);
 
-
   const [flashcards, setFlashcards] = useState({
     InputLanguage: "",
     OutputLanguage: "",
@@ -29,7 +28,7 @@ function Language() {
 
   useEffect(() => {
     //Grabs Languages from google
-      googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
+    googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
       setLanguageCodes(languageCodes);
     });
   }, []);
@@ -64,7 +63,7 @@ function Language() {
     setFront(value);
   }
 
-    //uses google to translate input word
+  //uses google to translate input word
   function handleFormSubmit(event) {
     //console.log("front", front);
     event.preventDefault();

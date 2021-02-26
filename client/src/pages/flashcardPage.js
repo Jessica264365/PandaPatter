@@ -7,7 +7,6 @@ import api from "../utils/api";
 
 // in out express server we need to create a model that looks like this
 function FlashcardPage(props) {
-
   return (
     <div className="container">
       <div className="row">

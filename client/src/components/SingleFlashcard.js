@@ -18,19 +18,6 @@ function SingleFlashcard(props) {
       setFlashcardDisplay(singleCard.Front);
       setStatus("Front");
     }
-    //  Code Robert originally had
-    // =========================================================
-    //     const newFlashcard = props.flashcards.map((flashcard, index) => {
-    //       if (i === index && status === "Front") {
-    //         flashcard.status = "Back";
-    //       } else if (i === index && status === "Back") {
-    //         flashcard.status = "Front";
-    //       }
-    //       return flashcard;
-    //     });
-    //     setFlashcard(newFlashcard);
-    //   };
-    // =========================================================
   };
 
   return (
@@ -42,37 +29,5 @@ function SingleFlashcard(props) {
       </div>
     </div>
   );
-  // More original code that we don't want to lose just yet
-  // ==========================================================
-  //   return (
-  // <div className="col-md-4 my-4" id="DisplayedCards">
-  //   {card.status === "front" ? (
-  //     <div className="card" onClick={() => handleClick()}>
-  //       <div className="card-body">
-  //         <h5 className="card-title">{flashcardDisplay}</h5>
-  {
-    /* 
-                    <p className="card-text">
-                        <small className="text-muted"> {card.Front.points}</small>
-                    </p> */
-  }
-  //       </div>
-  //     </div>
-  //   ) : (
-  //     <div className="card" onClick={() => handleClick()}>
-  //       <div className="card-body">
-  // <h5 className="card-title">{flashcardDisplay}</h5>
-
-  {
-    /* <p className="card-text">
-                            <small className="text-muted"> {card.Back}</small>
-                        </p> */
-  }
-  //   </div>
-  // </div>
-  //   )}
-  // </div>
-  //   );
-  // =========================================================
 }
 export default SingleFlashcard;
