@@ -302,11 +302,11 @@ body .Main1 .swing .selectors:checked + .slides .attach {
   opacity: 1;
 }
 
-body .Main1 .swing #sl1:checked ~ .nav .dot1,
-body .Main1 .swing #sl2:checked ~ .nav .dot2,
-body .Main1 .swing #sl3:checked ~ .nav .dot3,
-body .Main1 .swing #sl4:checked ~ .nav .dot4,
-body .Main1 .swing #sl5:checked ~ .nav .dot5 {
+body .Main1 .swing #sl1.selectors:checked ~ .nav .dot1,
+body .Main1 .swing #sl2.selectors:checked ~ .nav .dot2,
+body .Main1 .swing #sl3.selectors:checked ~ .nav .dot3,
+body .Main1 .swing #sl4.selectors:checked ~ .nav .dot4,
+body .Main1 .swing #sl5.selectors:checked ~ .nav .dot5 {
   -webkit-box-shadow: 0px 0px 10px 3px var(--color3);
           box-shadow: 0px 0px 10px 3px var(--color3);
           padding: 0.5rem;
