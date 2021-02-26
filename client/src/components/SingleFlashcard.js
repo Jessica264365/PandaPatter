@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 function SingleFlashcard(props) {
   //props are saved a variable so it's easier to work with.
   const singleCard = props.flashcards;

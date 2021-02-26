@@ -103,28 +103,20 @@ function Language() {
   return (
     <div>
       <div className="container" id="hidden">
+        <h6 id="explaination">* Please type any word of any language and select the language that you would like to learn and click translate button</h6>
         <main className="row">
+
           <div className="col-lg-6">
-            <br />
-
-            <button onClick={handleFormSubmit} id="go">
-              Translate
-            </button>
-
-            {/* input word and adds flashcard value */}
-            <input
+            <input className="frame"
               type="text"
               onChange={handleInputChange}
               name="Front"
               value={flashcards.front}
               placeholder="Let's Translate Something!"
             />
-          </div>
 
-          {/* dropdown menu */}
-          <div className="col-lg-6">
             <br />
-            <div className="dropdown">
+            <div className="dropdown" >
               <button
                 className="btn btn-secondary dropdown-toggle"
                 type="button"
@@ -135,31 +127,29 @@ function Language() {
               >
                 {languageName}
               </button>
-              <div
+              <div id="go"
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton"
                 onClick={handleClick}
               >
                 {languageList}
               </div>
-            </div>
-
-            {/* translated word */}
-            <div>
-              <p id="translate">{outputLanguage} </p>
-            </div>
-            <div>
-              <br />
-
-              {/* save button */}
-              <button onClick={handleSubmit} id="go2">
-                Save Flashcard!
-              </button>
+              <button onClick={handleFormSubmit} className="btns" id="trans">
+                Translate
+            </button>
             </div>
           </div>
+
+          <div className="col-lg-6">
+            <p id="translate">{outputLanguage} </p>
+          </div>
         </main>
+        <center>
+          <button onClick={handleSubmit} className="btns">
+            Save Flashcard!
+              </button></center>
       </div>
-    </div>
+    </div >
   );
 }
 
