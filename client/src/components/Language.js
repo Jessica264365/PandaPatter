@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import { Col, Row } from "react-bootstrap";
 import { Input, FormBtn } from "../components/Form";
 import { googleTranslate } from "../utils/API_KEY";
+import "../style/Translate.css";
 // import { language } from "googleapis/build/src/apis/language";
 
 function Language() {
@@ -95,6 +96,42 @@ function Language() {
 
   return (
     <div>
+       <Col>
+          <div className="dropdown">
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+             {languageName}
+
+            </button>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              {languageList}
+            </div>
+          </div>
+          <div>
+          </div>
+        </Col>
+      <Row>
+        <Col>
+          <div>
+            <form>
+              <Input
+                onChange={handleInputChange}
+                name="translateText"
+                placeholder="Let's Translate Something!"
+              />
+              <FormBtn disabled={!translateText} onClick={handleFormSubmit}>
+                Translate
+              </FormBtn>
+            </form>
+          </div>
+        </Col>
+      </Row>
       <Row>
         <Col>
           <div className="dropdown">
@@ -116,23 +153,6 @@ function Language() {
 
           <div>
             <Card body>{outputLanguage}</Card>
-          </div>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col>
-          <div>
-            <form>
-              <Input
-                onChange={handleInputChange}
-                name="translateText"
-                placeholder="Let's Translate Something!"
-              />
-              <FormBtn disabled={!translateText} onClick={handleFormSubmit}>
-                Translate
-              </FormBtn>
-            </form>
           </div>
         </Col>
       </Row>

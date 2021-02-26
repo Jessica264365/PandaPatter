@@ -1,0 +1,19 @@
+
+.Enbtn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0.4rem 1.5rem ;
+    border: none;
+    border-radius: .2rem;
+    background-color: rgba(73, 69, 69, 0.671);
+    color: white;
+    font-weight: 700;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    cursor: pointer;
+  }
+  .Enbtn:hover {
+    background-color: rgba(51, 47, 47, 0.301);
+    color: var(--color1);
+  }
