@@ -21,7 +21,9 @@ function Register() {
       generateUserDocument(user, { displayName });
     } catch (err) {
       console.log(err);
-      setError("Error signing up with email and password");
+      setError(
+        "Error signing up with email and password. Please make sure your password is at least 6 characters."
+      );
     }
     setEmail("");
     setPassword("");
@@ -47,6 +49,11 @@ function Register() {
           <div className="col-md-10" id="signup">
             <h4>Register</h4>
             <form action="/register" method="POST">
+              {error !== null && (
+                <div className="font-weight-bold text-center my-3 text-danger">
+                  {error}
+                </div>
+              )}
               <div>
                 <label for="name">Name</label>
               </div>
