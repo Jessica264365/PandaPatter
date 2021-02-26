@@ -11,7 +11,10 @@ module.exports = {
       });
   },
   findAllByLanguage: function (req, res) {
-    db.FlashCard.find({ OutputLanguage: req.params.language })
+    db.FlashCard.find({
+      OutputLanguage: req.params.language,
+      uid: req.params.uid,
+    })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => {
         res.status(422).json(err);
