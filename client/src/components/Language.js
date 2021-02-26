@@ -74,27 +74,32 @@ function Language() {
         setOutputLanguage(res.translatedText);
         setFlashcards({
           ...flashcards,
-          Back:res.translatedText
-          
-
-        })
+          Back: res.translatedText,
+        });
       });
     }
   }
-  const handleClick=event => {
-    const language=event.target.textContent
-    console.log(language)
+  const handleClick = (event) => {
+    const language = event.target.textContent;
+    console.log(language);
     setFlashcards({
       ...flashcards,
-      OutputLanguage:language
-    })
-  }
-
+      OutputLanguage: language,
+    });
+  };
+  const handleReset = () => {
+    Array.from(document.querySelectorAll("input")).forEach(
+      (input) => (input.value = "")
+    );
+  };
   //saves flashcard to database
   const handleSubmit = (event) => {
     console.log(flashcards);
     api.saveFlashcards(flashcards).then(function (results) {
       console.log(results);
+      setOutputLanguage("");
+      document.querySelectorAll("input");
+      handleReset();
     });
   };
 
@@ -136,8 +141,6 @@ function Language() {
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-             
-               
               >
                 {languageName}
               </button>
@@ -145,7 +148,6 @@ function Language() {
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton"
                 onClick={handleClick}
-                 
               >
                 {languageList}
               </div>
@@ -154,7 +156,6 @@ function Language() {
             {/* translated word */}
             <div>
               <p id="translate">{outputLanguage} </p>
-             
             </div>
             <div>
               <br />
