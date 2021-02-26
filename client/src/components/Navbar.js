@@ -26,8 +26,8 @@ function Navbar() {
           <Link className="navbar-brand" id="icon" to="/">
             Welcome to Panda Patter {userName}
           </Link>
-          <button
-            className="navbar-toggler"
+          {/* <button
+            className="navbar-toggler pos-f-t"
             type="button"
             data-toggle="collapse"
             data-target="#navbarToggleExternalContent"
@@ -36,8 +36,8 @@ function Navbar() {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+          </button> */}
+          <div className=" bg-dark p-4 collapse navbar-collapse " id="navbarTogglerDemo01">
             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
               <li className="nav-item">
                 <Link className="nav-link" to="/translate">

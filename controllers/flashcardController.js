@@ -4,7 +4,7 @@ const db = require("../models");
 module.exports = {
   findAll: function (req, res) {
     db.FlashCard.find({ uid: req.params.uid })
-      .then((dbModel) => res.json(dbModel))
+      .then((result) => res.json(result))
       .catch((err) => {
         res.status(422).json(err);
         console.log(res.status);
@@ -20,7 +20,7 @@ module.exports = {
   },
   findByOutput: function (req, res) {
     db.FlashCard.find({ OutputLanguage: req.OutputLanguage })
-      .then((dbModel) => res.json(dbModel))
+      .then((result) => res.json(result))
       .catch((err) => res.status(422).json(err));
   },
   create: function (req, res) {
