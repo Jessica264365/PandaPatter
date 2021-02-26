@@ -68,7 +68,7 @@ function Login({ history }) {
               />
             </div>
             <br />
-            <button
+            <button className="btns"
               type="submit"
               onClick={(e) => {
                 signInWithEmailAndPasswordHandler(e, email, password);

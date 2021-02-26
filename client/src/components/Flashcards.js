@@ -4,6 +4,7 @@ import Flashcards from "../components/Flashcards";
 import SingleFlashcard from "./SingleFlashcard";
 import api from "../utils/api";
 import { UserContext } from "../providers/UserProvider";
+import "../style/Main.css"
 
 function MultipleFlashcards(props) {
   const { user } = useContext(UserContext);
@@ -18,7 +19,7 @@ function MultipleFlashcards(props) {
       ))
     : "";
 
-  return <div className="card-deck row">{flascardList}</div>;
+  return <div className="card-deck row" id="Flashcard">{flascardList}</div>;
 }
 
 export default MultipleFlashcards;
