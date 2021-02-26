@@ -10,6 +10,14 @@ module.exports = {
         console.log(res.status);
       });
   },
+  findAllByLanguage: function (req, res) {
+    db.FlashCard.find({ OutputLanguage: req.params.language })
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => {
+        res.status(422).json(err);
+        console.log(res.status);
+      });
+  },
   findByOutput: function (req, res) {
     db.FlashCard.find({ OutputLanguage: req.OutputLanguage })
       .then((dbModel) => res.json(dbModel))
