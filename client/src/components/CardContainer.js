@@ -8,7 +8,7 @@ function CardContainer(props) {
   return (
     <div className="col-md-9" id="CardContainer">
       <br />
-      <MultipleFlashcards />
+      <MultipleFlashcards filterLanguage={props.filterLanguage} />
     </div>
   );
 }

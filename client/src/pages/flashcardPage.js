@@ -7,11 +7,22 @@ import api from "../utils/api";
 
 // in out express server we need to create a model that looks like this
 function FlashcardPage(props) {
+  const [filterLanguage, setFilterLanguage] = useState([]);
+  const handleClick = (event) => {
+    const { value } = event.target;
+    console.log(value);
+
+    api.getOutputLanguage(value).then((results) => {
+      console.log(results.data);
+      setFilterLanguage(results.data);
+    });
+  };
+
   return (
     <div className="container">
       <div className="row">
-        <DeckContainer></DeckContainer>
-        <CardContainer />
+        <DeckContainer handleClick={handleClick}></DeckContainer>
+        <CardContainer filterLanguage={filterLanguage} />
       </div>
     </div>
   );
