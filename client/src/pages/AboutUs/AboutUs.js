@@ -17,8 +17,8 @@ function AboutUs() {
                 <input type="radio" name="slideSelectors" id="sl1" className="selectors" checked />
                 <div className="part1 slides" >
                     <div className="attach">
-                        <h3>I am Robert Swallow (Back-End)</h3>
-                        <h4>worked on ... in this project</h4>
+                        <h3>I am Robert Swallow (Back-End and Project Manager)</h3>
+                        <h4>worked on logic  to create the functionality of the flashcards</h4>
                         <p>I currently operate from the West Coast
                         out of La Quinta California. I graduated from the University of Southern California Santa
                         Barbara
@@ -36,7 +36,7 @@ function AboutUs() {
                 <div className="part2 slides">
                     <div className="attach">
                         <h3>My name is Jessica Whitman (Back-End) </h3>
-                        <h4> Worked on ... in this project</h4>
+                        <h4> Worked on Set up the Firebase and FireStore. Created the UserProvider for the application</h4>
                         <p>I am a West Seattleite who loves dogs, absurdist fiction books, and
                         caffeine. I am a dedicated team player who is ready to dive right
                         into the web development world. Before entering the web development
@@ -52,7 +52,7 @@ function AboutUs() {
                 <div className="part3 slides">
                     <div className="attach">
                         <h3>I am Bailey Clemons (Back-End)</h3>
-                        <h4>Worked on ... in this project</h4>
+                        <h4>Worked on Wrote api calls and set up the api for the app.</h4>
                         <p> I hold a B.A. in Arts, Media, and Culture with an emphasis on Literature and a certificate in
                         editing. I link front end develpment and am consistently working to improve my skill and
                         knowledge in JavaScript, Node.js, and React.js.</p>
@@ -84,7 +84,7 @@ function AboutUs() {
                 <div className="part5 slides">
                     <div className="attach">
                         <h3>My name is Joseph Flygare (Back-End)</h3>
-                        <h4>Worked on ... in this project</h4>
+                        <h4>Worked on mongodb and MongoDB Atlas to take care of the schema to save data from user input.</h4>
                         <p>I am a full-stack developer at the University of Washington. I have a desire for learning new
                         technologies and growing my knowledge in this ever expanding field.</p>
                         <button className="btns"><a href="https://www.linkedin.com/in/joseph-flygare-6611a31b5/"> Check my
