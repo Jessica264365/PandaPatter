@@ -16,7 +16,6 @@ function Language() {
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [languageName, setLanguageName] = useState("Language");
   const { user } = useContext(UserContext);
-  //console.log(user.uid);
 
   const [flashcards, setFlashcards] = useState({
     InputLanguage: "",
@@ -48,8 +47,6 @@ function Language() {
     setLanguageName(ln.name);
   };
 
-  //console.log("select", selectedLanguage);
-
   //sets data to flashcard for database
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -65,11 +62,9 @@ function Language() {
 
   //uses google to translate input word
   function handleFormSubmit(event) {
-    //console.log("front", front);
     event.preventDefault();
 
     if (front) {
-      //console.log("success!");
       googleTranslate.translate(front, selectedLanguage, function (err, res) {
         setOutputLanguage(res.translatedText);
         setFlashcards({
@@ -112,11 +107,7 @@ function Language() {
           <div className="col-lg-6">
             <br />
 
-            <button
-              //disabled={!front}
-              onClick={handleFormSubmit}
-              id="go"
-            >
+            <button onClick={handleFormSubmit} id="go">
               Translate
             </button>
 
