@@ -8,5 +8,8 @@ export default {
   saveFlashcards: function (flashcards) {
     return axios.post("/api/flashcards", flashcards);
   },
+  getOutputLanguage:function(language){
+      return axios.get("/api/flashcards/language/"+language)
+  }
 };
 

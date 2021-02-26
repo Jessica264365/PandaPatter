@@ -73,8 +73,22 @@ function Language() {
       //console.log("success!");
       googleTranslate.translate(front, selectedLanguage, function (err, res) {
         setOutputLanguage(res.translatedText);
+        setFlashcards({
+          ...flashcards,
+          Back:res.translatedText
+          
+
+        })
       });
     }
+  }
+  const handleClick=event => {
+    const language=event.target.textContent
+    console.log(language)
+    setFlashcards({
+      ...flashcards,
+      OutputLanguage:language
+    })
   }
 
   //saves flashcard to database
@@ -123,12 +137,16 @@ function Language() {
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
+             
+               
               >
                 {languageName}
               </button>
               <div
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton"
+                onClick={handleClick}
+                 
               >
                 {languageList}
               </div>
@@ -136,7 +154,8 @@ function Language() {
 
             {/* translated word */}
             <div>
-              <p id="translate">{outputLanguage}</p>
+              <p id="translate">{outputLanguage} </p>
+             
             </div>
             <div>
               <br />
