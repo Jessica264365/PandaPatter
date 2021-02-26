@@ -2,13 +2,13 @@ import React from "react"
 import "../style/Main.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function DeckContainer() {
+function DeckContainer(props) {
     return (
 
        
             
                 <div className="col-md-3" id="DeckContainer" ><br />
-                    <select className="form-select" aria-label="Default select example" className="drop">
+                    <select onChange={props.handleClick} className="form-select" aria-label="Default select example" className="drop">
                         <option selected>translate: select Language </option>
                         <option value="Afrikaans">Afrikaans</option>
                         <option value="Albanian">Albanian</option>

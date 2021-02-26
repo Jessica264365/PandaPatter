@@ -3,12 +3,20 @@ import React from "react";
 import "../style/Main.css";
 // import { googleTranslate } from "../utils/API";
 import Language from "../components/Language";
+//import OGTranslate from "../components/OGTranslate";
 
 function Translate () {
 
   return (
-    <div>
+    <div className="container">
+      <div className="row">
+      <div className="col-md-6" id="CardContainer">
      <Language />
+     </div>
+     <div className="col-md-6" id="CardContainer">
+     <Language />
+     </div>
+     </div>
     </div>
   );
 
