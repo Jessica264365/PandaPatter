@@ -5,19 +5,18 @@ import "../style/Main.css";
 import Language from "../components/Language";
 //import OGTranslate from "../components/OGTranslate";
 
-function Translate () {
-
+function Translate() {
   return (
     <div className="container">
       <div className="row">
+
       <div className="col-md-10" id="CardContainer">
      <Language />
     </div>
      </div>
+
     </div>
   );
-
-
 }
 
 export default Translate;

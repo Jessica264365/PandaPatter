@@ -16,8 +16,6 @@ function Language() {
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [languageName, setLanguageName] = useState("Language");
   const { user } = useContext(UserContext);
-  //console.log(user.uid);
-
 
   const [flashcards, setFlashcards] = useState({
     InputLanguage: "",
@@ -29,7 +27,7 @@ function Language() {
 
   useEffect(() => {
     //Grabs Languages from google
-      googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
+    googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
       setLanguageCodes(languageCodes);
     });
   }, []);
@@ -49,8 +47,6 @@ function Language() {
     setLanguageName(ln.name);
   };
 
-  //console.log("select", selectedLanguage);
-
   //sets data to flashcard for database
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -64,38 +60,41 @@ function Language() {
     setFront(value);
   }
 
-    //uses google to translate input word
+  //uses google to translate input word
   function handleFormSubmit(event) {
-    //console.log("front", front);
     event.preventDefault();
 
     if (front) {
-      //console.log("success!");
       googleTranslate.translate(front, selectedLanguage, function (err, res) {
         setOutputLanguage(res.translatedText);
         setFlashcards({
           ...flashcards,
-          Back:res.translatedText
-          
-
-        })
+          Back: res.translatedText,
+        });
       });
     }
   }
-  const handleClick=event => {
-    const language=event.target.textContent
-    console.log(language)
+  const handleClick = (event) => {
+    const language = event.target.textContent;
+    console.log(language);
     setFlashcards({
       ...flashcards,
-      OutputLanguage:language
-    })
-  }
-
+      OutputLanguage: language,
+    });
+  };
+  const handleReset = () => {
+    Array.from(document.querySelectorAll("input")).forEach(
+      (input) => (input.value = "")
+    );
+  };
   //saves flashcard to database
   const handleSubmit = (event) => {
     console.log(flashcards);
     api.saveFlashcards(flashcards).then(function (results) {
       console.log(results);
+      setOutputLanguage("");
+      document.querySelectorAll("input");
+      handleReset();
     });
   };
 
@@ -108,11 +107,7 @@ function Language() {
           <div className="col-lg-6">
             <br />
 
-            <button
-              //disabled={!front}
-              onClick={handleFormSubmit}
-              id="go"
-            >
+            <button onClick={handleFormSubmit} id="go">
               Translate
             </button>
 
@@ -137,8 +132,6 @@ function Language() {
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-             
-               
               >
                 {languageName}
               </button>
@@ -146,7 +139,6 @@ function Language() {
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton"
                 onClick={handleClick}
-                 
               >
                 {languageList}
               </div>
@@ -155,7 +147,6 @@ function Language() {
             {/* translated word */}
             <div>
               <p id="translate">{outputLanguage} </p>
-             
             </div>
             <div>
               <br />

@@ -7,149 +7,25 @@ import api from "../utils/api";
 
 // in out express server we need to create a model that looks like this
 function FlashcardPage(props) {
-   
-    const[filterLanguage,setFilterLanguage]=useState([])
-    const handleClick=event => {
-        const {value}=event.target
-        console.log(value)
-        
-        api.getOutputLanguage(value).then(results =>{
-            console.log(results.data)
-             setFilterLanguage(results.data)
-        })
-    }
-  //   const [flashcards, setFlashcards] = useState([
-  // {
-  //     front: {
-  //        word: "teacher",
-  //        points:0
-  //     },
-  //     back: {
-  //         word: "先生 sensei",
-  //         points:0
-  //     },
-  //     status: "front"
-  // },
-  // {
-  //     front: {
-  //        word: "apple",
-  //        points:0
-  //     },
-  //     back: {
-  //         word: "林檎 ringo",
-  //         points:0
-  //     },
-  //     status: "front"
-  // },
-  // {
-  //     front: {
-  //        word: "japan",
-  //        points:0
-  //     },
-  //     back: {
-  //         word: "日本 nihon",
-  //         points:0
-  //     },
-  //     status: "front"
-  // },
-  // {
-  //     front: {
-  //        word: "train",
-  //        points:0
-  //     },
-  //     back: {
-  //         word: "列車 Ressha",
-  //         points:0
-  //     },
-  //     status: "front"
-  // },
-  // {
-  //     front: {
-  //        word: "river",
-  //        points:0
-  //     },
-  //     back: {
-  //         word: "川 kawa",
-  //         points:0
-  //     },
-  //     status: "front"
-  // },
-  // {
-  //     front: {
-  //        word: "bear",
-  //        points:0
-  //     },
-  //     back: {
-  //         word: "熊 kuma",
-  //         points:0
-  //     },
-  //     status: "front"
-  // },
-  // {
-  //     front: {
-  //        word: "forest",
-  //        points:0
-  //     },
-  //     back: {
-  //         word: "森林 shinrin",
-  //         points:0
-  //     },
-  //     status: "front"
-  // },
-  // {
-  //     front: {
-  //        word: "fish",
-  //        points:0
-  //     },
-  //     back: {
-  //         word: "魚 sakana",
-  //         points:0
-  //     },
-  //     status: "front"
-  // },
-  // {
-  //     front: {
-  //        word: "flower",
-  //        points:0
-  //     },
-  //     back: {
-  //         word: "花 hana",
-  //         points:0
-  //     },
-  //     status: "front"
-  // },
-  //   ]);
-  //   const retrieveFlashcards = () => {
-  //     api.getFlashcards().then((res) => {
-  //       console.log(res.data);
-  //       setFlashcards(res.data);
-  //     });
-  //   };
-  //   useEffect(() => {
-  //     retrieveFlashcards();
-  //   }, []);
-  //   //move to flashcard component and create useState variable to watch current status
-  //   const handleClick = (card, i) => {
-  //     console.log(card, i);
+  const [filterLanguage, setFilterLanguage] = useState([]);
+  const handleClick = (event) => {
+    const { value } = event.target;
+    console.log(value);
 
-  //     const newFlashcard = flashcards.map((flashcard, index) => {
-  //       if (i === index && flashcard.status === "front") {
-  //         flashcard.status = "back";
-  //       } else if (i === index && flashcard.status === "back") {
-  //         flashcard.status = "front";
-  //       }
-  //       return flashcard;
-  //     });
-  //     setFlashcards(newFlashcard);
-  //   };
+    api.getOutputLanguage(value).then((results) => {
+      console.log(results.data);
+      setFilterLanguage(results.data);
+    });
+  };
+
   return (
     <div className="container">
       <div className="row">
-        <DeckContainer  handleClick={handleClick}></DeckContainer>
+        <DeckContainer handleClick={handleClick}></DeckContainer>
         <CardContainer filterLanguage={filterLanguage} />
       </div>
     </div>
   );
 }
-// flahcards={flashcards} handleClick={handleClick}
+
 export default FlashcardPage;
