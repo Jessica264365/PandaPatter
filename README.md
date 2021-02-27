@@ -11,13 +11,11 @@ HTML, CSS, JavaScript, Jquery, Bootstrap, Node, Express, MongoDB(and Mongo Atlas
 https://github.com/Jessica264365/PandaPatter
 
 ## Deployed link online:
-
+https://pandapatter.herokuapp.com/
 ## Demo video link:
 
 ## demo pictures:
-<img src="">
-<img src="">
-<img src="">
+<img src="https://github.com/Jessica264365/PandaPatter/blob/main/client/src/pictures/demo.jpg?raw=true">
 
 # Panda Patter (Translate Flashcards)
 ## By Robert Swallow, Jessica Whiteman, Bailey Clemone, Merdad Karkudi, Joseph Flygare;
