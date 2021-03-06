@@ -6,7 +6,7 @@ import Register from "./pages/Register";
 import Translate from "./pages/Translate";
 import UserProvider from "./providers/UserProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/Navbar";
+import NavbarTop from "./components/Navbar";
 import DeckContainer from "./components/DeckContainer";
 import CardContainer from "./components/CardContainer";
 import ProtectedRoute from "./protectedRoute";
@@ -17,8 +17,8 @@ function App() {
   return (
     <UserProvider>
       <Router>
-        <div>
-          <Navbar />
+      
+          <NavbarTop />
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/register" component={Register} />
@@ -26,7 +26,7 @@ function App() {
             <ProtectedRoute path="/translate" component={Translate} />
             <ProtectedRoute path="/flashcard" component={Flashcard} />
           </Switch>
-        </div>
+       
       </Router>
     </UserProvider>
   );
