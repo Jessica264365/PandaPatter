@@ -97,7 +97,7 @@ function Register() {
                 />
               </div>
               <br />
-              <button
+              <button className="btns"
                 type="submit"
                 onClick={(e) => {
                   createUserHandler(e, email, password);
