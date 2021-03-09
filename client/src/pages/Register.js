@@ -17,7 +17,7 @@ function Register() {
         email,
         password
       );
-      console.log(user);
+      
       generateUserDocument(user, { displayName });
     } catch (err) {
       console.log(err);
