@@ -12,7 +12,7 @@ function SingleFlashcard(props) {
   console.log(singleCard);
   // If a card is clicked display the other side of the "flashcard"
   const handleClick = (e) => {
-    const target = e.target
+    const target = e.target;
     if (status === "Front" && target.id !== "thumbs") {
       setFlashcardDisplay(singleCard.Back);
       setStatus("Back");
@@ -27,7 +27,7 @@ function SingleFlashcard(props) {
       <div className="card" onClick={(e) => handleClick(e)}>
         <div className="card-body">
           <h5 className="card-title">{flashcardDisplay}</h5>
-          <Counter />
+          {status === "Back" ? <div></div> : <Counter />}
         </div>
       </div>
     </div>
