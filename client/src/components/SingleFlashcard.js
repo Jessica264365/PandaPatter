@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useReducer, useRef } from "react";
+import Counter from "./Counter"
+
+
+
 
 
 function SingleFlashcard(props) {
@@ -24,8 +28,9 @@ function SingleFlashcard(props) {
   return (
     <div className="col-md-4 my-4" id="DisplayedCards">
       <div className="card" onClick={() => handleClick()}>
-        <div className="card-body">
+        <div className="card-body" >
           <h5 className="card-title">{flashcardDisplay}</h5>
+          <Counter />
         </div>
       </div>
     </div>
