@@ -10,6 +10,7 @@ import Nav from "react-bootstrap/Nav";
 function NavbarTop() {
   const { user } = useContext(UserContext);
   const [userName, setUserName] = useState("");
+  const [signUp, setSignUp] = useState(true);
   useEffect(() => {
     checkForUser();
   }, [user]);
