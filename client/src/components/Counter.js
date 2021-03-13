@@ -39,7 +39,7 @@ function Count() {
 
 <div>{count}</div>
 
-     <img className="updown"  src="./right.png" alt="" onClick={() => dispatch("add")} />
+     <img className="updown"  src="./right.png" alt="" onClick={() => dispatch("add") } />
       
       {/* <button className="btn btn-success mt-5 mb-5" onClick={() => dispatch("add")}>
         Add

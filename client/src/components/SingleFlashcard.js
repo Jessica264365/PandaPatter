@@ -25,9 +25,12 @@ function SingleFlashcard(props) {
     }
   };
 
+ 
+
   return (
     <div className="col-md-4 my-4" id="DisplayedCards">
-      <div className="card" onClick={() => handleClick()}>
+      <div className="card" id="parentcard" onClick={() => handleClick()
+      }>
         <div className="card-body" >
           <h5 className="card-title">{flashcardDisplay}</h5>
           <Counter />
