@@ -27,7 +27,7 @@ function SingleFlashcard(props) {
       <div className="card" onClick={(e) => handleClick(e)}>
         <div className="card-body">
           <h5 className="card-title">{flashcardDisplay}</h5>
-          {status === "Back" ? <div></div> : <Counter />}
+          {status === "Back" ? <div></div> : <Counter count={singleCard._id}/>}
         </div>
       </div>
     </div>

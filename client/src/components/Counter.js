@@ -1,7 +1,10 @@
-import React, { useReducer, useRef } from "react";
+import React, { useReducer, useRef, useState } from "react";
 import "../App.css";
+import api from "../utils/api";
 
-function Count() {
+function Count(props) {
+  const [currentCount, setCount] = useState(0);
+  // setCount(props.count)
   const inputRef = useRef();
 
   const [count, dispatch] = useReducer((state, action) => {
@@ -24,10 +27,16 @@ function Count() {
     }
   }, 0);
 
-  // const handleRequestClick = (e) => {
-  //   // this will stop the bubbling effect of the parent and child click events
-  //   e.stopPropagation();
-  // };
+  const handleCount = (event) => {
+    
+    const id = event.target._id;
+    console.log(id);
+
+    // api.getOutputLanguage(value, uid).then((results) => {
+    //   console.log(results.data);
+    //   setFilterLanguage(results.data);
+    // });
+  };
 
   return (
     <div className="App">
@@ -38,7 +47,7 @@ function Count() {
         className="updown"
         src="./right.png"
         alt=""
-        // onClick={(e) => handleRequestClick(e)}
+        onClick={(e) => handleCount(e)}
         onClick={() => dispatch("add")}
       />
 
