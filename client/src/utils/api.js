@@ -11,4 +11,7 @@ export default {
   getOutputLanguage: function (language, uid) {
     return axios.get("/api/flashcards/language/" + language + "/" + uid);
   },
+  updateCount: function (id) {
+    return axios.put("/api/flashcards/" + id);
+  },
 };

@@ -1,10 +1,11 @@
-import React, { useReducer, useRef, useState } from "react";
+import React, { useReducer, useRef, useState, useEffect } from "react";
 import "../App.css";
 import api from "../utils/api";
 
 function Count(props) {
   const [currentCount, setCount] = useState(0);
-  // setCount(props.count)
+  console.log(currentCount);
+
   const inputRef = useRef();
 
   const [count, dispatch] = useReducer((state, action) => {
@@ -26,17 +27,24 @@ function Count(props) {
         return state;
     }
   }, 0);
+  useEffect(() => {
+    const id = props.id;
+    console.log(id)
+    setCount(count);
+    api.updateCount(id).then((results) => {
+      console.log(results);
+    });
+  }, [count]);
 
-  const handleCount = (event) => {
-    
-    const id = event.target._id;
-    console.log(id);
+  // const handleCount = (event) => {
+  //   const id = event.target._id;
+  //   console.log(event.target);
+  //   console.log(id);
 
-    // api.getOutputLanguage(value, uid).then((results) => {
-    //   console.log(results.data);
-    //   setFilterLanguage(results.data);
-    // });
-  };
+  //   api.updateCount(id).then((results) => {
+  //     console.log(results);
+  //   });
+  // };
 
   return (
     <div className="App">
@@ -47,7 +55,7 @@ function Count(props) {
         className="updown"
         src="./right.png"
         alt=""
-        onClick={(e) => handleCount(e)}
+        // onClick={(e) => handleCount(e)}
         onClick={() => dispatch("add")}
       />
 
