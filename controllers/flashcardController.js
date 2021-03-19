@@ -33,10 +33,34 @@ module.exports = {
   },
   update: function (req, res) {
     db.FlashCard.findByIdAndUpdate(
-      { _id: req.params.id },
-      { count: req.body.count }
+      req.params.id,
+      {
+        $push: {
+          count: req.body.count,
+        },
+      },
+      { new: true, runValidators: true }
     )
-      .then((result) => res.json(result))
-      .catch((err) => res.status(422).json(err));
+      .then((results) => {
+        res.json(results);
+      })
+      .catch((err) => {
+        res.status(400).json(err);
+      });
+    // db.FlashCard.findOneAndUpdate({_id: req.params.id}, { $set: { count: req.body.count }}, function(err){
+    //   console.log("This is the mongo error: " + err)
+    // })
+    //   db.FlashCard.findOneAndUpdate(
+    //     { _id: req.params.id },
+    //     { $set: { count: req.body.count } },
+    //     { new: true },
+    //     { overwrite: true }
+    //   )
+    //     // db.FlashCard.findByIdAndUpdate(req.params.id, {new:true}, {
+    //     //   $set: { count: req.body.count },
+    //     // })
+
+    //     .then((result) => res.json(result))
+    //     .catch((err) => res.status(422).json(err));
   },
 };

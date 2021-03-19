@@ -31,7 +31,7 @@ function Count(props) {
     const id = props.id;
     console.log(id)
     setCount(count);
-    api.updateCount(id).then((results) => {
+    api.updateCount(id, count).then((results) => {
       console.log(results);
     });
   }, [count]);
