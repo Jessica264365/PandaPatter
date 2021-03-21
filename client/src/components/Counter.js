@@ -36,16 +36,6 @@ function Count(props) {
     });
   }, [count]);
 
-  // const handleCount = (event) => {
-  //   const id = event.target._id;
-  //   console.log(event.target);
-  //   console.log(id);
-
-  //   api.updateCount(id).then((results) => {
-  //     console.log(results);
-  //   });
-  // };
-
   return (
     <div className="App">
       <div>{count}</div>
@@ -58,10 +48,6 @@ function Count(props) {
         onClick={() => dispatch("add")}
       />
 
-      {/* <button className="btn btn-success mt-5 mb-5" onClick={() => dispatch("add")}>
-        Add
-      </button> */}
-
       <img
         id="thumbs"
         className="updown"
@@ -69,9 +55,6 @@ function Count(props) {
         alt=""
         onClick={(e) => dispatch("subtract")}
       />
-      {/* <button className="btn btn-danger mt-5" onClick={() => dispatch("subtract")}>
-        Subtract
-      </button> */}
     </div>
   );
 }
