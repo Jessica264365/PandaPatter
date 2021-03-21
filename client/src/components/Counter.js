@@ -3,7 +3,10 @@ import "../App.css";
 import api from "../utils/api";
 
 function Count(props) {
-  const [currentCount, setCount] = useState(0);
+  console.log(props.flashcardCount)
+  
+
+  const [currentCount, setCount] = useState(props.flashcardCount);
   console.log(currentCount);
 
   const inputRef = useRef();
@@ -26,11 +29,11 @@ function Count(props) {
       default:
         return state;
     }
-  }, 0);
+  }, parseInt(currentCount));
   useEffect(() => {
     const id = props.id;
     console.log(id);
-    setCount(count);
+    setCount(parseInt(count));
     api.updateCount(id, { count }).then((results) => {
       console.log(results);
     });
@@ -38,7 +41,7 @@ function Count(props) {
 
   return (
     <div className="App">
-      <div>{count}</div>
+      <div>{currentCount}</div>
 
       <img
         id="thumbs"
