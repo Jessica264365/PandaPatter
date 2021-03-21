@@ -1,6 +1,6 @@
 # Panda Patter
 
-## By Robert Swallow, Jessica Whiteman, Bailey Clemone, Merdad Karkudi, Joseph Flygare;
+## By Robert Swallow, Jessica Whitman, Bailey Clemone, Merdad Karkudi, Joseph Flygare;
 
 ## User Stories:
 
