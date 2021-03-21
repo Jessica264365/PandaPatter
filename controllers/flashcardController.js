@@ -35,7 +35,7 @@ module.exports = {
     db.FlashCard.findByIdAndUpdate(
       req.params.id,
       {
-        $push: {
+        $set: {
           count: req.body.count,
         },
       },
@@ -43,6 +43,7 @@ module.exports = {
     )
       .then((results) => {
         res.json(results);
+        console.log(results);
       })
       .catch((err) => {
         res.status(400).json(err);

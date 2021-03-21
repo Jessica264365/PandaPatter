@@ -25,7 +25,7 @@ const FlashCardSchema = new mongoose.Schema({
     default: "",
   },
   count: {
-    type: Number,
+    type: String,
     trim: true,
     default: 0,
   },

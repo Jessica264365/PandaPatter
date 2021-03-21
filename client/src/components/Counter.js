@@ -29,9 +29,9 @@ function Count(props) {
   }, 0);
   useEffect(() => {
     const id = props.id;
-    console.log(id)
+    console.log(id);
     setCount(count);
-    api.updateCount(id, count).then((results) => {
+    api.updateCount(id, { count }).then((results) => {
       console.log(results);
     });
   }, [count]);
@@ -55,7 +55,6 @@ function Count(props) {
         className="updown"
         src="./right.png"
         alt=""
-        // onClick={(e) => handleCount(e)}
         onClick={() => dispatch("add")}
       />
 
