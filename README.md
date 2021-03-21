@@ -24,7 +24,7 @@ https://pandapatter.herokuapp.com/
 
 # Panda Patter
 
-## By Robert Swallow, Jessica Whiteman, Bailey Clemone, Merdad Karkudi, Joseph Flygare;
+## By Robert Swallow, Jessica Whitman, Bailey Clemone, Merdad Karkudi, Joseph Flygare;
 
 ## User Stories:
 
@@ -40,7 +40,7 @@ HTML, CSS, JavaScript, Jquery, Bootstrap, Node, Express, MongoDB(and Mongo Atlas
 
 Worked as a Project Manager to help maintain active communication throughout the process. Worked on logic to create the functionality of the flashcards, also worked on building and testing the database with Joe, and creating the logic to save new flashcards to our database. Used technologies such as: Javascript, MongoDB, Mongoose, React.
 
-## Jessica Whittman: (Back-End)
+## Jessica Whitman: (Back-End)
 
 Set up the Firebase and FireStore. Created the UserProvider for the application, which contains the userContext for the current signed in user. Also set up the MongoDB Atlas database, the repo, and the Heroku application. Helped with the logic behind flipping the flashcards when they are clicked to display the other side. Wrote the functions on the login and register page to store the user data in the FireStore, also figured out the logic behind the login button so the user is redirected to the translate page. Set up the protected routes for the application.
 
