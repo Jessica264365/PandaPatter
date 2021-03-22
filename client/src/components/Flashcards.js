@@ -7,12 +7,7 @@ import { UserContext } from "../providers/UserProvider";
 import "../style/Main.css";
 
 function MultipleFlashcards(props) {
-  // let countArray = [];
-  // props.filterLanguage.map((flashcard) => {
-  //   countArray.push(flashcard.count);
-  //   return countArray;
-  // });
-  // console.log("This is the count array" + countArray);
+
 
   const { user } = useContext(UserContext);
   // flashscards array is mapped through creating a new component for each individual flashcard
@@ -22,10 +17,7 @@ function MultipleFlashcards(props) {
   }
   const flascardList = props.filterLanguage
     ? props.filterLanguage.map((flashcard) => (
-        // console.log(flashcard.count)
-        //       let numbers = flashcard.count;
-        // numbers.sort((a, b) => a - b);
-        // console.log(numbers);
+
 
         <SingleFlashcard flashcards={flashcard} />
       ))

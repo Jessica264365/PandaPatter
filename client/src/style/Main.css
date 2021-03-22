@@ -167,147 +167,139 @@ h4 {
   height: 90%;
   border: 5px;
   border-color: #666;
-
-        }
-        #container{
-          background-color: rgba(53, 39, 245, 0.507);
-          /* background-image: url(./giphy.gif); */
-          width: 100%;
-          height: 100%;
-        }
-        #hidden{
-          background-color: rgb(32, 32, 30);
-          background-image: url(../pictures/bamboo.jpg);
-          /* background-image: url(./lights.gif); */
-          backface-visibility: hidden;
-          background-size: 100%;
-          /* width: 120%;
+}
+#container {
+  background-color: rgba(53, 39, 245, 0.507);
+  /* background-image: url(./giphy.gif); */
+  width: 100%;
+  height: 100%;
+}
+#hidden {
+  background-color: rgb(32, 32, 30);
+  background-image: url(../pictures/bamboo.jpg);
+  /* background-image: url(./lights.gif); */
+  backface-visibility: hidden;
+  background-size: 100%;
+  /* width: 120%;
           height: 80%; */
-          margin-top: 6.48rem;
-        }
-        .w-100{
-          height: 25rem;
-          width: 10rem;
-        }
-  #select{
-    height: 2rem;
-    width: 14rem;
-    border: 1px solid #00B4CC;
-    margin-bottom: 3rem;
-  }
-  #white{
-    color: rgb(255, 253, 253);
+  margin-top: 6.48rem;
+}
+.w-100 {
+  height: 25rem;
+  width: 10rem;
+}
+#select {
+  height: 2rem;
+  width: 14rem;
+  border: 1px solid #00b4cc;
+  margin-bottom: 3rem;
+}
+#white {
+  color: rgb(255, 253, 253);
+}
+#rating {
+  margin-top: 8%;
+}
+#movieRate1 {
+  font-size: 25px;
+  color: rgb(3, 3, 56);
+}
+#toEl {
+  color: rgb(138, 49, 49);
+  font-size: 20px;
+}
+#toEl2 {
+  color: rgb(138, 49, 49);
+  font-size: 20px;
+}
+***** .search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
 
-  }
-  #rating{
-    margin-top: 8%;
-  }
-  #movieRate1{
-    font-size: 25px;
-    color: rgb(3, 3, 56);
-  }
-  #toEl{
-    color: rgb(138, 49, 49);
-    font-size: 20px;
-  }
-  #toEl2{
-    color:rgb(138, 49, 49);
-    font-size: 20px;
-  }
-  *****
+.searchTerm {
+  width: 80%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 39px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
 
+.searchTerm:focus {
+  color: #00b4cc;
+}
 
-  .search {
-    width: 100%;
-    position: relative;
-    display: flex;
-  }
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
 
-  .searchTerm {
-    width: 80%;
-    border: 3px solid #00B4CC;
-    border-right: none;
-    padding: 5px;
-    height: 39px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #9DBFAF;
-  }
-
-  .searchTerm:focus{
-    color: #00B4CC;
-  }
-
-  .searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-  }
-
-  /*Resize the wrap to see the search bar change!*/
-  .wrap{
-    width: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #register{
-    margin-left: 2%;
-  }
-  #picture{
-    height: 150px;
-    width: 250px;
-    position: absolute;
-    margin-left: 260px;
-  }
-  #Name {
-    height: 8rem;
-    border-radius: 0.3rem;
-    margin: 3%;
-    margin-left: auto;
-
-  }
-  .drop{
-    margin-top: 2rem;
-  }
-  #go{
-    /* padding: 0.5rem; */
-    background-color: rgba(9, 150, 9, 0.801);
-    border-radius: 00.5rem;
-    color: #faf8f8;
-    padding: 1rem .2rem;
-  }
-  #go:hover{
-   
-    background-color: gray;
-  }
-  #go2{
-    /* padding: 0.5rem; */
-    padding: 1% 2% 1% 2%;
-    background-color: rgb(82, 87, 84);
-    border-radius: 00.5rem;
-    color: #eeeeee;
-  }
-  #go2:hover{
-    color: yellow;
-    background-color: gray;
-  }
-  .nav-link{
-
-    color:  #48A29D !important;
-  }
-  .nav-link :hover{
-    color: rgb(235, 252, 6);
-  }
-  #panda1{
-    /* height: 150px;
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#register {
+  margin-left: 2%;
+}
+#picture {
+  height: 150px;
+  width: 250px;
+  position: absolute;
+  margin-left: 260px;
+}
+#Name {
+  height: 8rem;
+  border-radius: 0.3rem;
+  margin: 3%;
+  margin-left: auto;
+}
+.drop {
+  margin-top: 2rem;
+}
+#go {
+  /* padding: 0.5rem; */
+  background-color: rgba(9, 150, 9, 0.801);
+  border-radius: 00.5rem;
+  color: #faf8f8;
+  padding: 1rem 0.2rem;
+}
+#go:hover {
+  background-color: gray;
+}
+#go2 {
+  /* padding: 0.5rem; */
+  padding: 1% 2% 1% 2%;
+  background-color: rgb(82, 87, 84);
+  border-radius: 00.5rem;
+  color: #eeeeee;
+}
+#go2:hover {
+  color: yellow;
+  background-color: gray;
+}
+.nav-link {
+  color: #48a29d !important;
+}
+.nav-link :hover {
+  color: rgb(235, 252, 6);
+}
+#panda1 {
+  /* height: 150px;
     width: 300px; */
   height: 15%;
   /* height: 15rem;
@@ -359,9 +351,9 @@ h4 {
 
 /* ............ */
 
-.navbar-toggler {
-  border-color: rgb(70, 163, 175);
+.navbar-toggler.collapsed {
+  border-color: rgb(66, 150, 161);
 }
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(66,150,161)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
