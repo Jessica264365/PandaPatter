@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from "react";
-import Flashcards from "../components/Flashcards";
 import "../style/Main.css";
 import CardContainer from "../components/CardContainer";
 import DeckContainer from "../components/DeckContainer";
@@ -11,13 +10,18 @@ function FlashcardPage(props) {
   const { user } = useContext(UserContext);
   const [filterLanguage, setFilterLanguage] = useState([]);
   const handleClick = (event) => {
+    
     const { value } = event.target;
     const uid = user.uid;
     console.log(value);
-
     api.getOutputLanguage(value, uid).then((results) => {
-      console.log(results.data);
-      setFilterLanguage(results.data);
+      setFilterLanguage([])
+      let currentData = results.data;
+      let sortedData = currentData.sort((a, b) => {
+        return a.count - b.count;
+      });
+      console.log(sortedData);
+      setFilterLanguage(sortedData);
     });
   };
 
