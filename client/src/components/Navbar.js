@@ -56,9 +56,13 @@ function NavbarTop() {
                 <b>Logout</b>
               </a>
             </Nav.Link>
-            <Nav.Link eventKey={2} to="/register" as={Link}>
-              <b>Sign up</b>
-            </Nav.Link>
+            {user === null ? (
+              <Nav.Link eventKey={2} to="/register" as={Link}>
+                <b>Sign up</b>
+              </Nav.Link>
+            ) : (
+              <div></div>
+            )}
             <Nav.Link eventKey={2} to="/Aboutus" as={Link}>
               <b>About Us</b>
             </Nav.Link>

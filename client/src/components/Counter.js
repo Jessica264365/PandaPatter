@@ -1,7 +1,14 @@
-import React, { useReducer, useRef } from "react";
+import React, { useReducer, useRef, useState, useEffect } from "react";
 import "../App.css";
+import api from "../utils/api";
 
-function Count() {
+function Count(props) {
+  console.log(props.flashcardCount)
+  
+
+  const [currentCount, setCount] = useState(props.flashcardCount);
+  console.log(currentCount);
+
   const inputRef = useRef();
 
   const [count, dispatch] = useReducer((state, action) => {
@@ -22,29 +29,27 @@ function Count() {
       default:
         return state;
     }
-  }, 0);
-
-  // const handleRequestClick = (e) => {
-  //   // this will stop the bubbling effect of the parent and child click events
-  //   e.stopPropagation();
-  // };
+  }, parseInt(currentCount));
+  useEffect(() => {
+    const id = props.id;
+    console.log(id);
+    setCount(parseInt(count));
+    api.updateCount(id, { count }).then((results) => {
+      console.log(results);
+    });
+  }, [count]);
 
   return (
     <div className="App">
-      <div>{count}</div>
+      <div>{currentCount}</div>
 
       <img
         id="thumbs"
         className="updown"
         src="./right.png"
         alt=""
-        // onClick={(e) => handleRequestClick(e)}
         onClick={() => dispatch("add")}
       />
-
-      {/* <button className="btn btn-success mt-5 mb-5" onClick={() => dispatch("add")}>
-        Add
-      </button> */}
 
       <img
         id="thumbs"
@@ -53,9 +58,6 @@ function Count() {
         alt=""
         onClick={(e) => dispatch("subtract")}
       />
-      {/* <button className="btn btn-danger mt-5" onClick={() => dispatch("subtract")}>
-        Subtract
-      </button> */}
     </div>
   );
 }
