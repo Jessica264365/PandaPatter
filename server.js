@@ -6,7 +6,6 @@ const app = express();
 
 const apiRoutes = require("./routes");
 
-
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

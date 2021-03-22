@@ -36,7 +36,11 @@ function Login({ history }) {
     <div className="container-fluid" className="container" id="hidden">
       <main className="row">
         <div className="col-md-10" id="login">
-        {error !== null && <div className = "font-weight-bold text-center my-3 text-danger">{error}</div>}
+          {error !== null && (
+            <div className="font-weight-bold text-center my-3 text-danger">
+              {error}
+            </div>
+          )}
           <form action="/login" method="POST">
             <br />
             <div>
@@ -68,7 +72,8 @@ function Login({ history }) {
               />
             </div>
             <br />
-            <button className="btns"
+            <button
+              className="btns"
               type="submit"
               onClick={(e) => {
                 signInWithEmailAndPasswordHandler(e, email, password);

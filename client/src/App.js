@@ -17,16 +17,14 @@ function App() {
   return (
     <UserProvider>
       <Router>
-      
-          <NavbarTop />
-          <Switch>
-            <Route exact path="/" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/AboutUs" component={AboutUs} />
-            <ProtectedRoute path="/translate" component={Translate} />
-            <ProtectedRoute path="/flashcard" component={Flashcard} />
-          </Switch>
-       
+        <NavbarTop />
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/AboutUs" component={AboutUs} />
+          <ProtectedRoute path="/translate" component={Translate} />
+          <ProtectedRoute path="/flashcard" component={Flashcard} />
+        </Switch>
       </Router>
     </UserProvider>
   );
