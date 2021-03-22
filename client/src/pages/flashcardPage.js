@@ -17,6 +17,18 @@ function FlashcardPage(props) {
 
     api.getOutputLanguage(value, uid).then((results) => {
       console.log(results.data);
+      // for (let i = 0; i < results.data.length; i++) {
+      //   let count = results.data[i].count
+      //   console.log("This is the count " + count)
+      //   return count;
+      // }
+      // let currentData = results.data; 
+      
+      // let sortedData = currentData.filter(function (currentElement) {
+      //   // the current value is an object, so you can check on its properties
+      //  return currentElement.sort((a, b) => a - b);
+      // });
+      // console.log("This is the sorted array" + sortedData);
       setFilterLanguage(results.data);
     });
   };
