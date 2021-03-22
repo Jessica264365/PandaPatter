@@ -1,12 +1,15 @@
 import { useEffect, useState, useContext } from "react";
 import React from "react";
 import "../style/Main.css";
-import Card from "react-bootstrap/Card";
-import { Col, Row, Container, Button } from "react-bootstrap";
-import { Input, FormBtn } from "../components/Form";
-import { googleTranslate } from "../utils/API_KEY";
+//import Card from "react-bootstrap/Card";
+//import { Col, Row, Container, Button } from "react-bootstrap";
+//import { Input, FormBtn } from "../components/Form";
+//import { googleTranslate } from "../utils/API_KEY";
 import api from "../utils/api";
 import { UserContext } from "../providers/UserProvider";
+
+const {Translate} = require('@google-cloud/translate').v2;
+const translate = new Translate();
 
 function Language() {
   const [languageCodes, setLanguageCodes] = useState([]);
@@ -27,10 +30,23 @@ function Language() {
 
   useEffect(() => {
     //Grabs Languages from google
-    googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
-      setLanguageCodes(languageCodes);
-    });
-  }, []);
+    // googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
+    //   setLanguageCodes(languageCodes);
+    // });
+
+    async function listLanguagesWithTarget() {
+
+      const [languages] = await translate.getLanguages(target);
+
+      console.log('Languages:');
+      languages.forEach(Language => console.log(language));
+    }
+
+
+  },
+   //[]
+   listLanguagesWithTarget());
+
 
   //creates language names for dropdown menu
   const languageList = languageCodes.map((language) => {
@@ -65,13 +81,24 @@ function Language() {
     event.preventDefault();
 
     if (front) {
-      googleTranslate.translate(front, selectedLanguage, function (err, res) {
-        setOutputLanguage(res.translatedText);
-        setFlashcards({
-          ...flashcards,
-          Back: res.translatedText,
+      // googleTranslate.translate(front, selectedLanguage, function (err, res) {
+      //   setOutputLanguage(res.translatedText);
+      //   setFlashcards({
+      //     ...flashcards,
+      //     Back: res.translatedText,
+      //   });
+      // });
+
+      async function translateText() {
+
+        let [translations] = await translate.translate(text, target);
+        translations = Array.isArry(translations) ? translations : [translations];
+        console.log('Translations:');
+        translations.forEach((translation, i) => {
+          console.log('${text[i]} => (${translation}');
         });
-      });
+
+      }
     }
   }
   const handleClick = (event) => {
