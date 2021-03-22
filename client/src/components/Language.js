@@ -23,6 +23,7 @@ function Language() {
     Front: "",
     Back: "",
     uid: user.uid,
+    count: 0,
   });
 
   useEffect(() => {
@@ -103,11 +104,14 @@ function Language() {
   return (
     <div>
       <div className="container" id="hidden">
-        <h6 id="explaination">* Please type any word of any language and select the language that you would like to learn and click translate button</h6>
+        <h6 id="explaination">
+          * Please type any word of any language and select the language that
+          you would like to learn and click translate button
+        </h6>
         <main className="row">
-
           <div className="col-lg-6">
-            <input className="frame"
+            <input
+              className="frame"
               type="text"
               onChange={handleInputChange}
               name="Front"
@@ -116,7 +120,7 @@ function Language() {
             />
 
             <br />
-            <div className="dropdown" >
+            <div className="dropdown">
               <button
                 className="btn btn-secondary dropdown-toggle"
                 type="button"
@@ -127,7 +131,8 @@ function Language() {
               >
                 {languageName}
               </button>
-              <div id="go"
+              <div
+                id="go"
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton"
                 onClick={handleClick}
@@ -136,7 +141,7 @@ function Language() {
               </div>
               <button onClick={handleFormSubmit} className="btns" id="trans">
                 Translate
-            </button>
+              </button>
             </div>
           </div>
 
@@ -147,9 +152,10 @@ function Language() {
         <center>
           <button onClick={handleSubmit} className="btns">
             Save Flashcard!
-              </button></center>
+          </button>
+        </center>
       </div>
-    </div >
+    </div>
   );
 }
 

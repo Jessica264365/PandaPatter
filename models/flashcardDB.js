@@ -24,6 +24,11 @@ const FlashCardSchema = new mongoose.Schema({
     trim: true,
     default: "",
   },
+  count: {
+    type: String,
+    trim: true,
+    default: 0,
+  },
 });
 
 const FlashCard = mongoose.model("FlashCard", FlashCardSchema);

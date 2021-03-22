@@ -1,427 +1,359 @@
 /* body for all files need to have " Times New Roman" font */
 /* used local Jpg  image   */
 body {
-    background-image: url();
-    background-size: 99.5% 99.5%;
-    margin: 5%;
-    font-family: Georgia, Times, "Times New Roman", serif;
-   background-color: #f5eeee5e;
+  background-image: url();
+  background-size: 99.5% 99.5%;
+  margin: 5%;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  background-color: #f5eeee5e;
+}
 
+html {
+  min-height: 100%;
+  position: relative;
+}
+h1 {
+  color: rgb(5, 21, 71);
+  font-size: 60px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-origin: padding-box;
+  background-color: rgba(0, 0, 255, 0.075);
+}
+#src1 {
+  width: 70%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+#src1 :focus {
+  width: 100%;
+}
 
-  }
+main {
+  margin: 70px 0;
+}
 
-  html {
+.block {
+  background-color: #fff;
+  padding: 33px;
+  /* margin-bottom: 35px; */
+}
 
-
-    min-height: 100%;
-    position: relative;
-  }
-  h1{
-    color: rgb(5, 21, 71);
-    font-size: 60px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background-origin: padding-box;
-    background-color: rgba(0, 0, 255, 0.075);
-
-  }
-   #src1{
-    width: 70%;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-   }
-   #src1 :focus {
-    width: 100%;
-  }
-
-  main {
-    margin: 70px 0;
-  }
-
-  .block {
-    background-color: #fff;
-    padding: 33px;
-    /* margin-bottom: 35px; */
-  }
-
-  .block-header {
-    font-size: larger;
-    color: #4aaaa5;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-weight: bold;
-  }
-  /* ID me means about me top written col, changed font, font size and font color */
-  #icon {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.block-header {
+  font-size: larger;
+  color: #4aaaa5;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+}
+/* ID me means about me top written col, changed font, font size and font color */
+#icon {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 25px;
   color: #4aaaa4;
   /* padding-left: 300px; */
-  }
-  /* navbar links :hover  */
-  .navbar-default .navbar-nav > li > a:hover {
-    color: #4aaaa5;
-  }
+}
+/* navbar links :hover  */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #4aaaa5;
+}
 
-  .navbar {
-    border: 2px;
-    background: white;
+.navbar {
+  border: 2px;
+  background: white;
+}
 
-  }
+.navbar-header {
+  background-color: #4aaaa4;
+}
 
+.connect-header {
+  font-size: 25px;
+}
 
-    .navbar-header {
-      background-color: #4aaaa4;
-    }
+.connect-photo {
+  width: 55px;
+  height: 55px;
+}
 
-  .connect-header {
-    font-size: 25px;
-  }
+#images {
+  padding-top: 15px;
+  text-align: center;
+}
+/* End of contect*/
 
-  .connect-photo {
-    width: 55px;
-    height: 55px;
-  }
+.footertext {
+  margin-top: 15px;
+  color: #eeeeee;
+}
 
-  #images {
-    padding-top: 15px;
-    text-align: center;
-  }
-  /* End of contect*/
+.footerline {
+  height: 6px;
+  padding-top: 3px;
+  background-color: #4aaaa5;
+}
+/*  FOOTER ends here */
 
-  .footertext {
-    margin-top: 15px;
-    color: #eeeeee;
-  }
+/* About page starts here  */
+.about-me-header {
+  margin-bottom: 33px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #4aaaa5;
+}
+/* floating my image to the left to have paragraph on the right  */
+#image {
+  float: left;
+  width: 220px;
+  margin: 0 30px 8px 0;
+}
+/*  About page ends*/
 
-  .footerline {
+/* portfolio */
+.port-image {
+  margin: 20px auto;
+}
+/* end of Protfolio */
 
-    height: 6px;
-    padding-top: 3px;
-    background-color: #4aaaa5;
-  }
-  /*  FOOTER ends here */
+.form-control {
+  border-radius: 0;
+  min-width: 100%;
+  max-width: 100%;
+}
 
-  /* About page starts here  */
-  .about-me-header {
-    margin-bottom: 33px;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 32px;
-    font-weight: bold;
-    color: #4aaaa5;
-  }
-  /* floating my image to the left to have paragraph on the right  */
-  #image {
+.submit {
+  padding: 20px 25px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #fff;
+  background-color: #4aaaa5;
+  border: 5px;
+}
 
-    float: left;
-    width: 220px;
-    margin: 0 30px 8px 0;
-  }
-  /*  About page ends*/
+.submit:hover {
+  opacity: 0.9;
+}
 
+h4 {
+  width: 300px;
+}
+.sidebar {
+  width: fit-content;
+  height: fit-content;
+  max-width: 300px;
+  padding: 35px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  float: right;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 22px;
+  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.26);
+}
 
-  /* portfolio */
-  .port-image {
-    margin: 20px auto;
-  }
-  /* end of Protfolio */
+.sidebar a:hover img {
+  border: 3px solid #470a0a;
+}
 
-
-  .form-control {
-    border-radius: 0;
-    min-width: 100%;
-    max-width: 100%;
-  }
-
-  .submit {
-
-    padding: 20px 25px;
-    font-size: 16px;
-    font-weight: lighter;
-    color: #fff;
-    background-color: #4aaaa5;
-    border: 5px;
-  }
-
-  .submit:hover{
-    opacity: .9;
-  }
-
-  h4{
-    width: 300px;
-
-    }
-        .sidebar {
-          width: fit-content;
-          height: fit-content;
-          max-width: 300px;
-          padding: 35px;
-          margin-bottom: 20px;
-          margin-left: 60px;
-          float: right;
-          padding-bottom: 20px;
-          margin-bottom: 15px;
-          line-height: 22px;
-          border: 1px solid #ddd;
-          background: rgba(255, 255, 255, 0.26);
-        }
-
-        .sidebar a:hover img {
-          border: 3px solid #470a0a;
-        }
-
-
-        .social {
-          position: relative;
-          width: 50px;
-          height: 50px;
-          margin: 5px;
-        }
-         .port-image {
+.social {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+.port-image {
   width: 95%;
   height: 90%;
   border: 5px;
   border-color: #666;
-
-        }
-        #container{
-          background-color: rgba(53, 39, 245, 0.507);
-          /* background-image: url(./giphy.gif); */
-          width: 100%;
-          height: 100%;
-        }
-        #hidden{
-          background-color: rgb(32, 32, 30);
-          background-image: url(../pictures/bamboo.jpg);
-          /* background-image: url(./lights.gif); */
-          backface-visibility: hidden;
-          background-size: 100%;
-          /* width: 120%;
-          height: 80%; */
-          margin-top: 6.48rem;
-        }
-        .w-100{
-          height: 25rem;
-          width: 10rem;
-        }
-  #select{
-    height: 2rem;
-    width: 14rem;
-    border: 1px solid #00B4CC;
-    margin-bottom: 3rem;
-  }
-  #white{
-    color: rgb(255, 253, 253);
-
-  }
-  #rating{
-    margin-top: 8%;
-  }
-  #movieRate1{
-    font-size: 25px;
-    color: rgb(3, 3, 56);
-  }
-  #toEl{
-    color: rgb(138, 49, 49);
-    font-size: 20px;
-  }
-  #toEl2{
-    color:rgb(138, 49, 49);
-    font-size: 20px;
-  }
-  *****
-
-
-  .search {
-    width: 100%;
-    position: relative;
-    display: flex;
-  }
-
-  .searchTerm {
-    width: 80%;
-    border: 3px solid #00B4CC;
-    border-right: none;
-    padding: 5px;
-    height: 39px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #9DBFAF;
-  }
-
-  .searchTerm:focus{
-    color: #00B4CC;
-  }
-
-  .searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-  }
-
-  /*Resize the wrap to see the search bar change!*/
-  .wrap{
-    width: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #register{
-    margin-left: 2%;
-  }
-  #picture{
-    height: 150px;
-    width: 250px;
-    position: absolute;
-    margin-left: 260px;
-  }
-  #Name {
-    height: 8rem;
-    border-radius: 0.3rem;
-    margin: 3%;
-    margin-left: auto;
-
-  }
-  .drop{
-    margin-top: 2rem;
-  }
-  #go{
-    /* padding: 0.5rem; */
-    background-color: rgba(9, 150, 9, 0.801);
-    border-radius: 00.5rem;
-    color: #faf8f8;
-    padding: 1rem .2rem;
-  }
-  #go:hover{
-   
-    background-color: gray;
-  }
-  #go2{
-    /* padding: 0.5rem; */
-    padding: 1% 2% 1% 2%;
-    background-color: rgb(82, 87, 84);
-    border-radius: 00.5rem;
-    color: #eeeeee;
-  }
-  #go2:hover{
-    color: yellow;
-    background-color: gray;
-  }
-  .nav-link{
-
-    color:  #48A29D !important;
-  }
-  .nav-link :hover{
-    color: rgb(235, 252, 6);
-  }
-  #panda1{
-    /* height: 150px;
-    width: 300px; */
-    height: 15%;
-    /* height: 15rem;
-    width: 10rem; */
-    position: absolute;
-    margin-left: 39%;
-
-
-  }
-  #icon:hover {
-    transition-delay: 600ms;
-    color:#f4f7f2;
-    text-shadow: 2px 4px 8px #cdf005;
-  }
-  #DeckContainer{
-
-    height: 500px;
-    width: 250px;
-    margin-top: 10%;
-    /* margin-left: 7%; */
-    background-color: rgba(52, 58, 64, 0.568);
-    border: black solid;
-  }
-  #choosenLangauge{
-    margin-top: 15%;
-    margin-left: 1rem;
-  }
-  #CardContainer{
-    height: 500px;
-    width: 250px;
-    margin-top: 10%;
-    /* margin-left: 50%;
-    margin-right: 7%; */
-    background-color:rgba(52, 58, 64, 0.199);
-    position: relative
-  }
-  #translate{
-    position: relative;
-    height: 7rem;
-    width: 100%;
-    border: black solid 2px;
-    border-radius: .3rem;
-    background-color: white;
-
-  }
-   .btns {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding: 0.2rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    background-color:  #48A29D;
-    color: white;
-    font-weight: 700;
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
-    cursor: pointer;
-  }
-  
-   .btns:hover {
-    background-color: rgba(51, 47, 47, 0.301);
-    color: var(--color1);
-  }
-  #explaination{
-    
-    color: rgb(4, 12, 36);
-    margin-top: 2%;
-    margin-bottom: 2%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.15rem;
-    background-origin: padding-box;
-    background-color: rgba(52, 52, 218, 0.075);
-  }
-.frame{
-
-  height: 7rem;
-  width: 100%;
-  border: black solid 2px;
-  border-radius: .3rem;
 }
-#trans{
-
+#container {
+  background-color: rgba(53, 39, 245, 0.507);
+  /* background-image: url(./giphy.gif); */
+  width: 100%;
+  height: 100%;
+}
+#hidden {
+  background-color: rgb(32, 32, 30);
+  background-image: url(../pictures/bamboo.jpg);
+  /* background-image: url(./lights.gif); */
+  backface-visibility: hidden;
+  background-size: 100%;
+  /* width: 120%;
+          height: 80%; */
+  margin-top: 6.48rem;
+}
+.w-100 {
+  height: 25rem;
+  width: 10rem;
+}
+#select {
+  height: 2rem;
+  width: 14rem;
+  border: 1px solid #00b4cc;
+  margin-bottom: 3rem;
+}
+#white {
+  color: rgb(255, 253, 253);
+}
+#rating {
+  margin-top: 8%;
+}
+#movieRate1 {
+  font-size: 25px;
+  color: rgb(3, 3, 56);
+}
+#toEl {
+  color: rgb(138, 49, 49);
+  font-size: 20px;
+}
+#toEl2 {
+  color: rgb(138, 49, 49);
+  font-size: 20px;
+}
+***** .search {
+  width: 100%;
   position: relative;
-  float: right;
-  padding: 1.4% 2% 1.5% 2%;
-  background-color: rgb(110, 112, 111);
-  border-radius: 00.2rem;
+  display: flex;
+}
+
+.searchTerm {
+  width: 80%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 39px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #00b4cc;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#register {
+  margin-left: 2%;
+}
+#picture {
+  height: 150px;
+  width: 250px;
+  position: absolute;
+  margin-left: 260px;
+}
+#Name {
+  height: 8rem;
+  border-radius: 0.3rem;
+  margin: 3%;
+  margin-left: auto;
+}
+.drop {
+  margin-top: 2rem;
+}
+#go {
+  /* padding: 0.5rem; */
+  background-color: rgba(9, 150, 9, 0.801);
+  border-radius: 00.5rem;
+  color: #faf8f8;
+  padding: 1rem 0.2rem;
+}
+#go:hover {
+  background-color: gray;
+}
+#go2 {
+  /* padding: 0.5rem; */
+  padding: 1% 2% 1% 2%;
+  background-color: rgb(82, 87, 84);
+  border-radius: 00.5rem;
   color: #eeeeee;
 }
-#trans:hover{
+#go2:hover {
   color: yellow;
   background-color: gray;
 }
-
-#Flashcard{
-  background-color:#48A29D;
+.nav-link {
+  color: #48a29d !important;
 }
+.nav-link :hover {
+  color: rgb(235, 252, 6);
+}
+#panda1 {
+  /* height: 150px;
+    width: 300px; */
+  height: 15%;
+  /* height: 15rem;
+    width: 10rem; */
+  position: absolute;
+  margin-left: 39%;
+}
+#icon:hover {
+  transition-delay: 600ms;
+  color: #f4f7f2;
+  text-shadow: 2px 4px 8px #cdf005;
+}
+#DeckContainer {
+  height: 500px;
+  width: 250px;
+  margin-top: 10%;
+  /* margin-left: 7%; */
+  background-color: rgba(199, 190, 190, 0.377);
+}
+#choosenLangauge {
+  margin-top: 15%;
+  margin-left: 1rem;
+}
+#CardContainer {
+  height: 500px;
+  width: 250px;
+  margin-top: 10%;
+  /* margin-left: 50%;
+    margin-right: 7%; */
+  background-color: rgba(199, 190, 190, 0.377);
+  position: relative;
+}
+#translate {
+  margin-top: 1rem;
+  color: #000000;
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 3.1rem 12rem 3rem 5rem;
+  height: 100%;
+  border-radius: 0.3rem;
+  /* margin-right: 37%; */
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+/* #selection1{
+    margin-left: 3%;
+  } */
 
- .navsize {
-  height: 4.2rem !important;
-  margin-right: 6%;
+/* ............ */
+
+.navbar-toggler.collapsed {
+  border-color: rgb(66, 150, 161);
+}
+span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(66,150,161)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
