@@ -51,12 +51,3 @@ const getUserDocument = async (uid) => {
     console.error("Could not fetch the user", err);
   }
 };
-// Original rules for FireStore
-// service cloud.firestore {
-//   match /databases/{database}/documents {
-//     match /{document=**} {
-//       allow read, write: if
-//           request.time < timestamp.date(2021, 3, 11);
-//     }
-//   }
-// }
