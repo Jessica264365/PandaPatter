@@ -350,6 +350,64 @@ h4 {
   } */
 
 /* ............ */
+.btns {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0.2rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color:  #48A29D;
+  color: white;
+  font-weight: 700;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+ .btns:hover {
+  background-color: rgba(51, 47, 47, 0.301);
+  color: var(--color1);
+}
+#explaination{
+  
+  color: rgb(4, 12, 36);
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.15rem;
+  background-origin: padding-box;
+  background-color: rgba(52, 52, 218, 0.075);
+}
+.frame{
+
+height: 7rem;
+width: 100%;
+border: black solid 2px;
+border-radius: .3rem;
+}
+#trans{
+
+position: relative;
+float: right;
+padding: 1.4% 2% 1.5% 2%;
+background-color: rgb(110, 112, 111);
+border-radius: 00.2rem;
+color: #eeeeee;
+}
+#trans:hover{
+color: yellow;
+background-color: gray;
+}
+
+#Flashcard{
+background-color:#48A29D;
+}
+
+.navsize {
+height: 4.2rem !important;
+margin-right: 6%;
+}
 
 .navbar-toggler.collapsed {
   border-color: rgb(66, 150, 161);
