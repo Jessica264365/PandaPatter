@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useImperativeHandle } from "react";
 
 export default {
   getFlashcards: function (uid) {

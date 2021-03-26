@@ -28,7 +28,7 @@ function FlashcardPage(props) {
   return (
     <div className="container">
       <div className="row">
-        <DeckContainer handleClick={handleClick}></DeckContainer>
+        <DeckContainer handleClick={handleClick} uid={user.uid}></DeckContainer>
         <CardContainer filterLanguage={filterLanguage} />
       </div>
     </div>
