@@ -32,8 +32,8 @@ function Login({ history }) {
       setPassword(value);
     }
   };
-  return (
-    <div className="container-fluid" className="container" id="hidden">
+  return ( 
+    <div className="container-fluid" id="hidden2" >
       <main className="row">
         <div className="col-md-10" id="login">
           {error !== null && (

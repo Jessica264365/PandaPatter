@@ -180,9 +180,36 @@ h4 {
   /* background-image: url(./lights.gif); */
   backface-visibility: hidden;
   background-size: 100%;
-  /* width: 120%;
-          height: 80%; */
-  margin-top: 6.48rem;
+  width: 95%;
+          height: 80%;
+  margin: 6%;
+
+}
+#hidden2 {
+  background-color: rgb(32, 32, 30);
+  background-image: url(../pictures/bamboo.jpg);
+  /* background-image: url(./lights.gif); */
+  backface-visibility: hidden;
+  background-size: 100%;
+  position: fixed;
+  width: 57%;
+          height: 49%;
+  margin: 11% 6% 0 16.5%;
+  
+
+}
+#hidden3 {
+  background-color: rgb(32, 32, 30);
+  background-image: url(../pictures/bamboo.jpg);
+  /* background-image: url(./lights.gif); */
+  backface-visibility: hidden;
+  background-size: 100%;
+  position:fixed;
+  width: 57%;
+          height: 75%;
+  margin: 11% 6% 0 16.5% !important;
+  
+
 }
 .w-100 {
   height: 25rem;
@@ -299,13 +326,10 @@ h4 {
   color: rgb(235, 252, 6);
 }
 #panda1 {
-  /* height: 150px;
-    width: 300px; */
+  margin-top: 4%;
   height: 15%;
-  /* height: 15rem;
-    width: 10rem; */
   position: absolute;
-  margin-left: 39%;
+  margin-left: 20%;
 }
 #icon:hover {
   transition-delay: 600ms;
@@ -313,15 +337,17 @@ h4 {
   text-shadow: 2px 4px 8px #cdf005;
 }
 #DeckContainer {
-  height: 500px;
+  margin-top: 15%;
+  height: 350px;
   width: 250px;
-  margin-top: 10%;
+
   /* margin-left: 7%; */
   background-color: rgba(199, 190, 190, 0.377);
+  
 }
 #choosenLangauge {
   margin-top: 15%;
-  margin-left: 1rem;
+  margin-left: .1rem;
 }
 #CardContainer {
   height: 500px;
@@ -329,16 +355,18 @@ h4 {
   margin-top: 10%;
   /* margin-left: 50%;
     margin-right: 7%; */
-  background-color: rgba(199, 190, 190, 0.377);
+  background-color: rgba(255, 255, 255, 0);
   position: relative;
 }
 #translate {
   margin-top: 1rem;
+  margin-right: 10%;
   color: #000000;
   font-size: 20px;
   background-color: #ffffff;
-  padding: 3.1rem 12rem 3rem 5rem;
-  height: 100%;
+  /* padding: 3.1rem 12rem 3rem 5rem; */
+  height: 6rem;
+  width: 100%;
   border-radius: 0.3rem;
   /* margin-right: 37%; */
   border-style: solid;
@@ -380,8 +408,8 @@ h4 {
   background-color: rgba(52, 52, 218, 0.075);
 }
 .frame{
-
-height: 7rem;
+margin-top: 1rem;
+height: 6rem;
 width: 100%;
 border: black solid 2px;
 border-radius: .3rem;
@@ -414,4 +442,8 @@ margin-right: 6%;
 }
 span.navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(66,150,161)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.nav1{
+ 
+  margin-top: 1px;
 }
