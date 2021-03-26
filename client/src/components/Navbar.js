@@ -23,7 +23,7 @@ function NavbarTop() {
   }
 
   return (
-    <div>
+    <div className="nav1">
       <Navbar
         fixed="top"
         collapseOnSelect
@@ -33,7 +33,7 @@ function NavbarTop() {
         id="navbar"
       >
         <Navbar.Brand id="icon" to="/" as={Link}>
-          Welcome to Panda Patter {userName}
+          Welcome to Panda Patter     {userName}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse

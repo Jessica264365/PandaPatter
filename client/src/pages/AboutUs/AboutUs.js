@@ -3,14 +3,17 @@ import "./AboutUs.css";
 
 
 function AboutUs() {
-    return (<div> <center>  <div className="nav under">
-    <label for="sl1" className="dots dot1">Robert</label>
-    <label for="sl2" className="dots dot2">Jessica</label>
-    <label for="sl3" className="dots dot3">Bailey</label>
-    <label for="sl4" className="dots dot4">Merdad</label>
-    <label for="sl5" className="dots dot5">Joseph</label>
-</div>
-</center>
+    return (
+        <div> 
+           
+            <div className="nav under">
+        <label for="sl1" className="dots dot1">Robert</label>
+        <label for="sl2" className="dots dot2">Jessica</label>
+        <label for="sl3" className="dots dot3">Bailey</label>
+        <label for="sl4" className="dots dot4">Merdad</label>
+        <label for="sl5" className="dots dot5">Joseph</label>
+    
+    </div>
         <div className="container Main1">
 
             <div className="swing " >
@@ -96,8 +99,16 @@ function AboutUs() {
                 </div>
 
             </div>
-           
+            <div className="nav under">
+        <label for="sl1" className="dots dot1">Robert</label>
+        <label for="sl2" className="dots dot2">Jessica</label>
+        <label for="sl3" className="dots dot3">Bailey</label>
+        <label for="sl4" className="dots dot4">Merdad</label>
+        <label for="sl5" className="dots dot5">Joseph</label>
+    
+    </div>
         </div>
+        
         </div>
     )
 }

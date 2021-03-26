@@ -44,7 +44,7 @@ function Register() {
 
   return (
     <div>
-      <div className="container" id="hidden">
+      <div className="container" id="hidden3">
         <main className="row">
           <div className="col-md-10" id="signup">
             <h4>Register</h4>
