@@ -3,8 +3,7 @@ import "../App.css";
 import api from "../utils/api";
 
 function Count(props) {
-  console.log(props.flashcardCount)
-  
+  console.log(props.flashcardCount);
 
   const [currentCount, setCount] = useState(props.flashcardCount);
   console.log(currentCount);
