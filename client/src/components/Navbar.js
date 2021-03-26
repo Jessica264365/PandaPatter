@@ -23,7 +23,7 @@ function NavbarTop() {
   }
 
   return (
-    <div>
+    <div className="nav1">
       <Navbar
         fixed="top"
         collapseOnSelect
