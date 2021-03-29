@@ -7,13 +7,22 @@ import { UserContext } from "../providers/UserProvider";
 import "../style/Main.css";
 
 function MultipleFlashcards(props) {
+  const handleDeleteClick = (id) => {
+    api.delete(id).then((results) => {
+        
+      console.log(results);
+    });
+  };
+  useEffect(() => {
+  
+  }, [handleDeleteClick]);
   const { user } = useContext(UserContext);
   // flashscards array is mapped through creating a new component for each individual flashcard
   // Individual flashcard is passed down a a prop.
   
   const flascardList = props.filterLanguage
     ? props.filterLanguage.map((flashcard) => (
-        <SingleFlashcard flashcards={flashcard} />
+        <SingleFlashcard flashcards={flashcard} handleDeleteClick={handleDeleteClick}/>
       ))
     : "";
 

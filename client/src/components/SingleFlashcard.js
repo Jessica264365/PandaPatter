@@ -1,5 +1,6 @@
 import React, { useState, useReducer, useRef } from "react";
 import Counter from "./Counter";
+import DeleteBtn from "./DeleteBtn"
 
 function SingleFlashcard(props) {
   //props are saved a variable so it's easier to work with.
@@ -13,10 +14,10 @@ function SingleFlashcard(props) {
   // If a card is clicked display the other side of the "flashcard"
   const handleClick = (e) => {
     const target = e.target;
-    if (status === "Front" && target.id !== "thumbs") {
+    if (status === "Front" && target.id !== "thumbs" && target.id !== "delete") {
       setFlashcardDisplay(singleCard.Back);
       setStatus("Back");
-    } else if (status === "Back" && target.id !== "thumbs") {
+    } else if (status === "Back" && target.id !== "thumbs" && target.id !== "delete") {
       setFlashcardDisplay(singleCard.Front);
       setStatus("Front");
     }
@@ -27,6 +28,7 @@ function SingleFlashcard(props) {
       <div className="card" onClick={(e) => handleClick(e)}>
         <div className="card-body">
           <h5 className="card-title">{flashcardDisplay}</h5>
+          <DeleteBtn id={singleCard._id} handleDeleteClick={props.handleDeleteClick}/>
           {status === "Back" ? <div></div> : <Counter id={singleCard._id} flashcardCount={singleCard.count}/>}
         </div>
       </div>
