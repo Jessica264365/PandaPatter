@@ -326,7 +326,8 @@ h4 {
   color: rgb(235, 252, 6);
 }
 #panda1 {
-  margin-top: 4%;
+  position: fixed;
+  margin-top: 4.3%;
   height: 15%;
   position: absolute;
   margin-left: 20%;
@@ -337,12 +338,13 @@ h4 {
   text-shadow: 2px 4px 8px #cdf005;
 }
 #DeckContainer {
+  position: relative;
   margin-top: 15%;
   height: 350px;
   width: 250px;
 
   /* margin-left: 7%; */
-  background-color: rgba(199, 190, 190, 0.377);
+  background-color: rgba(110, 104, 104, 0.829);
   
 }
 #choosenLangauge {

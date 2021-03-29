@@ -20,9 +20,9 @@ function DeckContainer(props) {
   return (
     <div className="col-md-3 justify-content-center" id="DeckContainer">
       <br />
-      <h4 id="choosenLangauge">
+     <center> <h6 id="choosenLangauge">
         <b>Choose Your Deck:</b>
-      </h4>
+      </h6></center>
       <center> <select
         onChange={props.handleClick}
         className="form-select"
