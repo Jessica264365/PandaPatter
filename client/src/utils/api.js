@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useImperativeHandle } from "react";
 
 export default {
   getFlashcards: function (uid) {
@@ -10,5 +9,8 @@ export default {
   },
   getOutputLanguage: function (language, uid) {
     return axios.get("/api/flashcards/language/" + language + "/" + uid);
+  },
+  updateCount: function (id, count) {
+    return axios.put("/api/flashcards/" + id, count);
   },
 };

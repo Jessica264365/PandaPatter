@@ -17,7 +17,7 @@ function Register() {
         email,
         password
       );
-      console.log(user);
+      
       generateUserDocument(user, { displayName });
     } catch (err) {
       console.log(err);
@@ -44,7 +44,7 @@ function Register() {
 
   return (
     <div>
-      <div className="container" id="hidden">
+      <div className="container" id="hidden3">
         <main className="row">
           <div className="col-md-10" id="signup">
             <h4>Register</h4>

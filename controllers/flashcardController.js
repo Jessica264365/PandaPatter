@@ -31,4 +31,23 @@ module.exports = {
       .then((result) => res.json(result))
       .catch((err) => res.status(422).json(err));
   },
+  update: function (req, res) {
+    db.FlashCard.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: {
+          count: req.body.count,
+        },
+      },
+      { new: true, runValidators: true }
+    )
+      .then((results) => {
+        res.json(results);
+        console.log(results);
+      })
+      .catch((err) => {
+        res.status(400).json(err);
+      });
+  
+  },
 };
