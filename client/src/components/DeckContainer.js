@@ -23,15 +23,15 @@ function DeckContainer(props) {
       <h4 id="choosenLangauge">
         <b>Choose Your Deck:</b>
       </h4>
-      <select
+      <center> <select
         onChange={props.handleClick}
         className="form-select"
         aria-label="Default select example"
         className="drop"
       >
-        <option selected> Select Deck </option>
+       <option selected> Select Deck </option>
         {currentDecks}
-      </select>
+      </select> </center> 
     </div>
   );
 }
