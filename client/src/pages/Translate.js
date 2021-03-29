@@ -9,12 +9,10 @@ function Translate() {
   return (
     <div className="container">
       <div className="row">
-
-      <div className="col-md-10" id="CardContainer">
-     <Language />
-    </div>
-     </div>
-
+        <div className="col-md-10" id="CardContainer">
+          <Language />
+        </div>
+      </div>
     </div>
   );
 }
