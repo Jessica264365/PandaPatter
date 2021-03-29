@@ -46,7 +46,7 @@ function Count(props) {
       <img
         id="thumbs"
         className="updown"
-        src="./righmerget.png"
+        src="./right.png"
         alt=""
         onClick={() => dispatch("add")}
       />
