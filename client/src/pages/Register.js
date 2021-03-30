@@ -50,7 +50,7 @@ function Register() {
             <h4>Register</h4>
             <form action="/register" method="POST">
               {error !== null && (
-                <div className="font-weight-bold text-center my-3 text-danger">
+               <div className="font-weight-bold text-center my-3 text-dark">
                   {error}
                 </div>
               )}

@@ -13,4 +13,7 @@ export default {
   updateCount: function (id, count) {
     return axios.put("/api/flashcards/" + id, count);
   },
+  delete: function (id) {
+    return axios.delete("/api/flashcards/" + id)
+  }
 };

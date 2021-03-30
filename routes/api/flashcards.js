@@ -10,4 +10,9 @@ router
 
 router.route("/:id").put(flashcardController.update);
 
+router
+  .route("/:id")
+  .put(flashcardController.update)
+  .delete(flashcardController.remove);
+
 module.exports = router;
