@@ -29,7 +29,7 @@ function Translate() {
     });
   };
   return (
-    <div>
+    <div style="overflow-y:auto; max-height:80vh">
       <div className="container" id="hidden">
         <main className="row">
           <div className="col-lg-6">
@@ -151,7 +151,7 @@ function Translate() {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6" id="scrollbar">
             <br />
             <select
               className="form-select drop scrollable-menu"
