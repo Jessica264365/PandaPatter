@@ -20,18 +20,18 @@ function DeckContainer(props) {
   return (
     <div className="col-md-3 justify-content-center" id="DeckContainer">
       <br />
-      <h4 id="choosenLangauge">
+     <center> <h6 id="choosenLangauge">
         <b>Choose Your Deck:</b>
-      </h4>
-      <select
+      </h6></center>
+      <center> <select
         onChange={props.handleClick}
         className="form-select"
         aria-label="Default select example"
         className="drop"
       >
-        <option selected> Select Deck </option>
+       <option selected> Select Deck </option>
         {currentDecks}
-      </select>
+      </select> </center> 
     </div>
   );
 }
