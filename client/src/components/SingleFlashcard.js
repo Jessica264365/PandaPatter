@@ -42,11 +42,8 @@ function SingleFlashcard(props) {
   function setCurrentCardCount(count) {
     setCardCount(count);
   }
-  function areYouSure(answer) {
-    setDeletePrompt(true);
-  }
-  function NoNotSure() {
-    setDeletePrompt(false)
+  function areYouSure(param) {
+    setDeletePrompt(param);
   }
   
   return (
@@ -62,7 +59,7 @@ function SingleFlashcard(props) {
                 id={singleCard._id}
                 setHiddenClass={setHiddenClass}
                 areYouSure={areYouSure}
-                NoNotSure={NoNotSure}
+               
               />
             </div>
           </div>

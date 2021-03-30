@@ -13,12 +13,12 @@ function DeleteBtn(props) {
     });
   };
   const handleDelete = (event) => {
-    props.areYouSure();
+    props.areYouSure(true);
     setDeletePrompt(true);
   };
   const handleCancelDelete = () => {
     setDeletePrompt(false);
-    props.NoNotSure();
+    props.areYouSure(false);
   };
 
   let id = props.id;
