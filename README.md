@@ -1,6 +1,6 @@
 # Panda Patter
 
-## By Robert Swallow, Jessica Whitman, Bailey Clemone, Merdad Karkudi, Joseph Flygare;
+## By Robert Swallow, Jessica Whitman, Bailey Clemons, Merdad Karkudi, Joseph Flygare;
 
 ## User Stories:
 
@@ -24,7 +24,7 @@ https://pandapatter.herokuapp.com/
 
 # Panda Patter
 
-## By Robert Swallow, Jessica Whitman, Bailey Clemone, Merdad Karkudi, Joseph Flygare;
+## By Robert Swallow, Jessica Whitman, Bailey Clemons, Merdad Karkudi, Joseph Flygare;
 
 ## User Stories:
 
