@@ -12,6 +12,10 @@ function SingleFlashcard(props) {
 
   const [isNotHidden, setIsNotHidden] = useState(true);
 
+  const [cardCount, setCardCount] = useState(singleCard.count);
+
+  const [deletePrompt, setDeletePrompt] = useState(false);
+
   console.log(singleCard);
   // If a card is clicked display the other side of the "flashcard"
   const handleClick = (e) => {
@@ -35,21 +39,61 @@ function SingleFlashcard(props) {
   function setHiddenClass() {
     setIsNotHidden(false);
   }
+  function setCurrentCardCount(count) {
+    setCardCount(count);
+  }
+  function areYouSure(answer) {
+    setDeletePrompt(true);
+  }
+  function NoNotSure() {
+    setDeletePrompt(false)
+  }
   
   return (
-    <div  className={`col-md-4 my-4 ${isNotHidden ? "" : "d-none"}`}id="DisplayedCards">
-      <div className="card" onClick={(e) => handleClick(e)}>
-        <div className="card-body">
-          <h5 className="card-title">{flashcardDisplay}</h5>
-          <DeleteBtn id={singleCard._id} setHiddenClass={setHiddenClass}/>
-          {status === "Back" ? (
-            <div></div>
-          ) : (
-            <Counter id={singleCard._id} flashcardCount={singleCard.count}  />
-          )}
+    <>
+      {deletePrompt === true ? (
+        <div className={`col-md-4 my-4 ${isNotHidden ? "" : "d-none"}`} id="DisplayedCards">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">
+                Are you sure you would like to delete this card?
+              </h5>
+              <DeleteBtn
+                id={singleCard._id}
+                setHiddenClass={setHiddenClass}
+                areYouSure={areYouSure}
+                NoNotSure={NoNotSure}
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      ) : (
+        <div
+          className={`col-md-4 my-4 ${isNotHidden ? "" : "d-none"}`}
+          id="DisplayedCards"
+        >
+          <div className="card" onClick={(e) => handleClick(e)}>
+            <div className="card-body">
+              <h5 className="card-title">{flashcardDisplay}</h5>
+              <DeleteBtn
+                id={singleCard._id}
+                setHiddenClass={setHiddenClass}
+                areYouSure={areYouSure}
+              />
+              {status === "Back" ? (
+                <div></div>
+              ) : (
+                <Counter
+                  id={singleCard._id}
+                  flashcardCount={cardCount}
+                  setCurrentCardCount={setCurrentCardCount}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 export default SingleFlashcard;
