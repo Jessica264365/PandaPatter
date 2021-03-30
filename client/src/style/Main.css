@@ -513,11 +513,12 @@ span.navbar-toggler-icon {
  
   margin-top: 1px;
 }
-.scrollable-menu {
-  height: auto;
-  max-height: 200px;
-  overflow-x: hidden;
-}
+
 #cardDeck {
   color: #eeeeee;
+}
+/* CSS for dropdown scroll menu */
+#go {
+  height: 200px;
+  overflow-y:auto
 }
