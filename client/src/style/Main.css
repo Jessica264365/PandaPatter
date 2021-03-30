@@ -168,22 +168,23 @@ h4 {
   border: 5px;
   border-color: #666;
 }
-#container {
-  background-color: rgba(53, 39, 245, 0.507);
+/* #container {
+  background-color: rgba(53, 39, 245, 0.507); */
   /* background-image: url(./giphy.gif); */
-  width: 100%;
+  /* width: 100%;
   height: 100%;
-}
+} */
 #hidden {
   background-color: rgb(32, 32, 30);
   background-image: url(../pictures/bamboo.jpg);
-  /* background-image: url(./lights.gif); */
   backface-visibility: hidden;
   background-size: 100%;
-  width: 95%;
-          height: 80%;
-  margin: 6%;
-
+  position: fixed;
+  width: 57%;
+        
+  margin-top: 3rem ;
+         
+          
 }
 #hidden2 {
   background-color: rgb(32, 32, 30);
@@ -194,7 +195,7 @@ h4 {
   position: fixed;
   width: 57%;
           height: 49%;
-  margin: 11% 6% 0 16.5%;
+  margin: 10rem 6% 0 16.5%;
   
 
 }
@@ -207,7 +208,7 @@ h4 {
   position:fixed;
   width: 57%;
           height: 75%;
-  margin: 11% 6% 0 16.5% !important;
+  margin: 10rem 6% 0 16.5% !important;
   
 
 }
@@ -326,10 +327,11 @@ h4 {
   color: rgb(235, 252, 6);
 }
 #panda1 {
-  margin-top: 4%;
-  height: 15%;
-  position: absolute;
+  position: fixed;
+  margin-top: 3.3rem;
+  height: 7.2rem;
   margin-left: 20%;
+  margin-bottom: 1px;
 }
 #icon:hover {
   transition-delay: 600ms;
@@ -337,12 +339,13 @@ h4 {
   text-shadow: 2px 4px 8px #cdf005;
 }
 #DeckContainer {
-  margin-top: 15%;
+  position: relative;
+  margin-top: 10rem;
   height: 350px;
-  width: 250px;
+  width: 15rem;
 
   /* margin-left: 7%; */
-  background-color: rgba(199, 190, 190, 0.377);
+  background-color: rgba(110, 104, 104, 0.829);
   
 }
 #choosenLangauge {
@@ -395,6 +398,28 @@ h4 {
 
  .btns:hover {
   background-color: rgba(51, 47, 47, 0.301);
+  color: var(--color1);
+}
+.btns1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  top:0;
+     right:0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0.1rem 0.6rem 0.25rem 0.6rem;
+  border: none;
+  border-radius: 1rem;
+  background-color:  #fdfdfd;
+  color: rgb(136, 2, 2);
+  font-weight: 700;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  cursor: pointer;
+}
+.btns1:hover {
+  background-color: rgb(153, 24, 24);
   color: var(--color1);
 }
 #explaination{

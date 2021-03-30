@@ -1,21 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
+import "../style/Main.css";
 import api from "../utils/api";
 
 function DeleteBtn(props) {
+  const [deletePrompt, setDeletePrompt] = useState(false);
+
   const handleClick = (event) => {
     api.delete(props.id).then((results) => {
       props.setHiddenClass();
       console.log(results);
     });
   };
+  const handleDelete = (event) => {
+    props.areYouSure();
+    setDeletePrompt(true);
+  };
 
   let id = props.id;
   console.log(id);
   return (
-    <button className="delete-btn" id="delete" onClick={handleClick}>
-      Delete
-    </button>
+    <>
+      {deletePrompt === true ? (
+        <div>
+          <button onClick={handleClick}>Yes</button>
+          <button>No</button>
+        </div>
+      ) : (
+        <button className="delete-btn btns1" id="delete" onClick={handleDelete}>
+          x
+        </button>
+      )}
+    </>
   );
 }
 export default DeleteBtn;

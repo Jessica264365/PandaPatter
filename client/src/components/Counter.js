@@ -34,6 +34,7 @@ function Count(props) {
     console.log(id);
     setCount(parseInt(count));
     api.updateCount(id, { count }).then((results) => {
+      props.setCurrentCardCount(results.data.count)
       console.log(results);
     });
   }, [count]);
