@@ -45,11 +45,14 @@ function SingleFlashcard(props) {
   function areYouSure(param) {
     setDeletePrompt(param);
   }
-  
+
   return (
     <>
       {deletePrompt === true ? (
-        <div className={`col-md-4 my-4 ${isNotHidden ? "" : "d-none"}`} id="DisplayedCards">
+        <div
+          className={`col-md-4 my-4 ${isNotHidden ? "" : "d-none"}`}
+          id="DisplayedCards"
+        >
           <div className="card">
             <div className="card-body">
               <h5 className="card-title">
@@ -59,7 +62,6 @@ function SingleFlashcard(props) {
                 id={singleCard._id}
                 setHiddenClass={setHiddenClass}
                 areYouSure={areYouSure}
-               
               />
             </div>
           </div>
