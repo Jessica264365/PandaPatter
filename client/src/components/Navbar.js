@@ -75,7 +75,6 @@ function NavbarTop() {
         alt="Panda"
       />
     </div>
-   
   );
 }
 

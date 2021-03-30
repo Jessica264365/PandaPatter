@@ -77,7 +77,6 @@ function Language() {
   }
   const handleClick = (event) => {
     const language = event.target.textContent;
-    console.log(language);
     setFlashcards({
       ...flashcards,
       OutputLanguage: language,
@@ -98,8 +97,6 @@ function Language() {
       handleReset();
     });
   };
-
-  console.log("flashcard", flashcards);
 
   return (
     <div>

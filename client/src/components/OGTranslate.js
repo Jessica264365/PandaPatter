@@ -2,7 +2,7 @@ import "../style/Main.css";
 import api from "../utils/api";
 import React, { useContext, useState } from "react";
 import { UserContext } from "../providers/UserProvider";
-import "../style/Main.css"
+import "../style/Main.css";
 
 function Translate() {
   const { user } = useContext(UserContext);
@@ -23,10 +23,7 @@ function Translate() {
     });
   };
   const handleSubmit = (event) => {
-    console.log(flashcards);
-    api.saveFlashcards(flashcards).then(function (results) {
-      console.log(results);
-    });
+    api.saveFlashcards(flashcards).then(function (results) {});
   };
   return (
     <div style="overflow-y:auto; max-height:80vh">

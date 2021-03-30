@@ -42,17 +42,17 @@ function SingleFlashcard(props) {
   function setCurrentCardCount(count) {
     setCardCount(count);
   }
-  function areYouSure(answer) {
-    setDeletePrompt(true);
+  function areYouSure(param) {
+    setDeletePrompt(param);
   }
-  function NoNotSure() {
-    setDeletePrompt(false)
-  }
-  
+
   return (
     <>
       {deletePrompt === true ? (
-        <div className={`col-md-4 my-4 ${isNotHidden ? "" : "d-none"}`} id="DisplayedCards">
+        <div
+          className={`col-md-4 my-4 ${isNotHidden ? "" : "d-none"}`}
+          id="DisplayedCards"
+        >
           <div className="card">
             <div className="card-body">
               <h5 className="card-title">
@@ -62,7 +62,6 @@ function SingleFlashcard(props) {
                 id={singleCard._id}
                 setHiddenClass={setHiddenClass}
                 areYouSure={areYouSure}
-                NoNotSure={NoNotSure}
               />
             </div>
           </div>
