@@ -14,7 +14,7 @@ function DeleteBtn(props) {
   let id = props.id;
   console.log(id);
   return (
-    <button className="delete-btn btns1" onClick={handleClick}>
+    <button className="delete-btn btns1" id="delete" onClick={handleClick}>
     x
     </button>
   );
