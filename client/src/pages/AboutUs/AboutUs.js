@@ -6,10 +6,7 @@ function AboutUs() {
     return (
         <div> 
            
-//             <div className="nav under">
-//       ...
-    
-//     </div>
+
         <div className="container Main1">
 
             <div className="swing " >
