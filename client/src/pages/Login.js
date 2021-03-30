@@ -37,7 +37,7 @@ function Login({ history }) {
       <main className="row">
         <div className="col-md-10" id="login">
           {error !== null && (
-            <div className="font-weight-bold text-center my-3 text-danger">
+            <div className="font-weight-bold text-center my-3 text-dark">
               {error}
             </div>
           )}

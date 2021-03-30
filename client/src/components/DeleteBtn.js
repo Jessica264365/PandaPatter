@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "../style/Main.css"
 import api from "../utils/api";
 
 function DeleteBtn(props) {
@@ -13,8 +14,8 @@ function DeleteBtn(props) {
   let id = props.id;
   console.log(id);
   return (
-    <button className="delete-btn" id="delete" onClick={handleClick}>
-      Delete
+    <button className="delete-btn btns1" onClick={handleClick}>
+    x
     </button>
   );
 }
