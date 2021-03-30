@@ -5,7 +5,10 @@ import "./AboutUs.css";
 function AboutUs() {
     return (
         <div> 
-           
+                <div className="nav under">
+  .
+    
+    </div>  
 
         <div className="container Main1">
 
