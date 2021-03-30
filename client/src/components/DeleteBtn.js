@@ -9,20 +9,17 @@ function DeleteBtn(props) {
   const handleClick = (event) => {
     api.delete(props.id).then((results) => {
       props.setHiddenClass();
-      console.log(results);
     });
   };
   const handleDelete = (event) => {
-    props.areYouSure();
+    props.areYouSure(true);
     setDeletePrompt(true);
   };
   const handleCancelDelete = () => {
     setDeletePrompt(false);
-    props.NoNotSure();
+    props.areYouSure(false);
   };
 
-  let id = props.id;
-  console.log(id);
   return (
     <>
       {deletePrompt === true ? (
