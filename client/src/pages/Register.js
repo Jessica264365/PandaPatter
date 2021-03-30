@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth, generateUserDocument } from "../firebase";
 import { Link } from "react-router-dom";
 import "../style/Main.css";
-function Register() {
+function Register({ history }) {
   // set the state for the user variables
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,6 +28,7 @@ function Register() {
     setEmail("");
     setPassword("");
     setDisplayName("");
+    history.push("/");
   };
 
   // Handle the change in state
