@@ -401,17 +401,18 @@ h4 {
   color: var(--color1);
 }
 .btns1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   position: absolute;
   top:0;
      right:0;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 0.15rem 0.7rem 0.3rem 0.7rem;
+  padding: 0.1rem 0.6rem 0.25rem 0.6rem;
   border: none;
   border-radius: 1rem;
-  background-color:  #fa2408;
-  color: white;
+  background-color:  #fdfdfd;
+  color: rgb(136, 2, 2);
   font-weight: 700;
   -webkit-transition: all 500ms;
   transition: all 500ms;
