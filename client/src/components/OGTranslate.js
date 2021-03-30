@@ -2,6 +2,7 @@ import "../style/Main.css";
 import api from "../utils/api";
 import React, { useContext, useState } from "react";
 import { UserContext } from "../providers/UserProvider";
+import "../style/Main.css"
 
 function Translate() {
   const { user } = useContext(UserContext);
@@ -34,7 +35,7 @@ function Translate() {
           <div className="col-lg-6">
             <br />
             <select
-              className="form-select drop"
+              className="form-select drop scrollable-menu"
               aria-label="Default select example"
               name="InputLanguage"
               onChange={handleInputChange}
@@ -153,7 +154,7 @@ function Translate() {
           <div className="col-lg-6">
             <br />
             <select
-              className="form-select drop"
+              className="form-select drop scrollable-menu"
               aria-label="Default select example"
               name="OutputLanguage"
               onChange={handleInputChange}
