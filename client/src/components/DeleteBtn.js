@@ -27,8 +27,8 @@ function DeleteBtn(props) {
     <>
       {deletePrompt === true ? (
         <div>
-          <button onClick={handleClick}>Yes</button>
-          <button onClick={handleCancelDelete}>No </button>
+          <button className="btns2" onClick={handleClick}>Yes</button>
+          <button className="btns3" onClick={handleCancelDelete}>No </button>
         </div>
       ) : (
         <button className="delete-btn btns1" id="delete" onClick={handleDelete}>
