@@ -16,6 +16,10 @@ function DeleteBtn(props) {
     props.areYouSure();
     setDeletePrompt(true);
   };
+  const handleCancelDelete = () => {
+    setDeletePrompt(false);
+    props.NoNotSure();
+  };
 
   let id = props.id;
   console.log(id);
@@ -24,7 +28,7 @@ function DeleteBtn(props) {
       {deletePrompt === true ? (
         <div>
           <button onClick={handleClick}>Yes</button>
-          <button>No</button>
+          <button onClick={handleCancelDelete}>No </button>
         </div>
       ) : (
         <button className="delete-btn btns1" id="delete" onClick={handleDelete}>

@@ -13,6 +13,7 @@ function SingleFlashcard(props) {
   const [isNotHidden, setIsNotHidden] = useState(true);
 
   const [cardCount, setCardCount] = useState(singleCard.count);
+
   const [deletePrompt, setDeletePrompt] = useState(false);
 
   console.log(singleCard);
@@ -41,9 +42,13 @@ function SingleFlashcard(props) {
   function setCurrentCardCount(count) {
     setCardCount(count);
   }
-  function areYouSure() {
+  function areYouSure(answer) {
     setDeletePrompt(true);
   }
+  function NoNotSure() {
+    setDeletePrompt(false)
+  }
+  
   return (
     <>
       {deletePrompt === true ? (
@@ -57,6 +62,7 @@ function SingleFlashcard(props) {
                 id={singleCard._id}
                 setHiddenClass={setHiddenClass}
                 areYouSure={areYouSure}
+                NoNotSure={NoNotSure}
               />
             </div>
           </div>
