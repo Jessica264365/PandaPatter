@@ -12,10 +12,13 @@ function Register({ history }) {
   // When the button is clicked the user state is updated
   const createUserHandler = async (e, email, password) => {
     e.preventDefault();
-    if (displayName === "") {
+    if (displayName === "" || displayName.length > 10) {
       setError(
         "You must have a display name that is no more than 10 characters."
       );
+      setEmail("");
+      setPassword("");
+      setDisplayName("");
     } else {
       try {
         const { user } = await auth.createUserWithEmailAndPassword(
@@ -26,19 +29,19 @@ function Register({ history }) {
       } catch (err) {
         console.log(err);
         setError(
-          "Error signing up with email and password. Please make sure your password is at least 6 characters."
+          "Error signing up with email and password. Please make sure you password is at least 6 characters."
         );
       }
 
       if (error === null) {
         history.push("/");
-        setEmail("");
-        setPassword("");
-        setDisplayName("");
       } else {
         setError(
           "Error signing up with email and password. Please make sure your password is at least 6 characters."
         );
+        setEmail("");
+        setPassword("");
+        setDisplayName("");
       }
     }
   };
