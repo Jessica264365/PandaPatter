@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth, generateUserDocument } from "../firebase";
 import { Link } from "react-router-dom";
 import "../style/Main.css";
-function Register() {
+function Register({ history }) {
   // set the state for the user variables
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,22 +12,38 @@ function Register() {
   // When the button is clicked the user state is updated
   const createUserHandler = async (e, email, password) => {
     e.preventDefault();
-    try {
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
-      
-      generateUserDocument(user, { displayName });
-    } catch (err) {
-      console.log(err);
+    if (displayName === "" || displayName.length > 10) {
       setError(
-        "Error signing up with email and password. Please make sure your password is at least 6 characters."
+        "You must have a display name that is no more than 10 characters."
       );
+      setEmail("");
+      setPassword("");
+      setDisplayName("");
+    } else {
+      try {
+        const { user } = await auth.createUserWithEmailAndPassword(
+          email,
+          password
+        );
+        generateUserDocument(user, { displayName });
+      } catch (err) {
+        console.log(err);
+        setError(
+          "Error signing up with email and password. Please make sure you password is at least 6 characters."
+        );
+      }
+
+      if (error === null) {
+        history.push("/");
+      } else {
+        setError(
+          "Error signing up with email and password. Please make sure your password is at least 6 characters."
+        );
+        setEmail("");
+        setPassword("");
+        setDisplayName("");
+      }
     }
-    setEmail("");
-    setPassword("");
-    setDisplayName("");
   };
 
   // Handle the change in state
@@ -50,7 +66,7 @@ function Register() {
             <h4>Register</h4>
             <form action="/register" method="POST">
               {error !== null && (
-               <div className="font-weight-bold text-center my-3 text-dark">
+                <div className="font-weight-bold text-center my-3 text-dark">
                   {error}
                 </div>
               )}
@@ -97,7 +113,8 @@ function Register() {
                 />
               </div>
               <br />
-              <button className="btns"
+              <button
+                className="btns"
                 type="submit"
                 onClick={(e) => {
                   createUserHandler(e, email, password);

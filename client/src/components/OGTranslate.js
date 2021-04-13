@@ -2,6 +2,7 @@ import "../style/Main.css";
 import api from "../utils/api";
 import React, { useContext, useState } from "react";
 import { UserContext } from "../providers/UserProvider";
+import "../style/Main.css";
 
 function Translate() {
   const { user } = useContext(UserContext);
@@ -22,19 +23,16 @@ function Translate() {
     });
   };
   const handleSubmit = (event) => {
-    console.log(flashcards);
-    api.saveFlashcards(flashcards).then(function (results) {
-      console.log(results);
-    });
+    api.saveFlashcards(flashcards).then(function (results) {});
   };
   return (
-    <div>
+    <div style="overflow-y:auto; max-height:80vh">
       <div className="container" id="hidden">
         <main className="row">
           <div className="col-lg-6">
             <br />
             <select
-              className="form-select drop"
+              className="form-select drop scrollable-menu"
               aria-label="Default select example"
               name="InputLanguage"
               onChange={handleInputChange}
@@ -150,10 +148,10 @@ function Translate() {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6" id="scrollbar">
             <br />
             <select
-              className="form-select drop"
+              className="form-select drop scrollable-menu"
               aria-label="Default select example"
               name="OutputLanguage"
               onChange={handleInputChange}

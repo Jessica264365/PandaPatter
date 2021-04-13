@@ -422,6 +422,47 @@ h4 {
   background-color: rgb(153, 24, 24);
   color: var(--color1);
 }
+.btns2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0.1rem 0.6rem 0.25rem 0.6rem;
+  border: none;
+  border-radius: 1rem;
+  background-color:  #fdfdfd;
+  color: rgb(136, 2, 2);
+  font-weight: 700;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  cursor: pointer;
+}
+.btns2:hover {
+  background-color:  rgb(72, 162, 157);
+  color: var(--color1);
+}
+.btns3{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0.1rem 0.6rem 0.25rem 0.6rem;
+  border: none;
+  border-radius: 1rem;
+  background-color:  #fdfdfd;
+  color: rgb(136, 2, 2);
+  font-weight: 700;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  cursor: pointer;
+}
+.btns3:hover {
+  background-color:rgb(153, 24, 24); 
+  color: var(--color1);
+}
+
 #explaination{
   
   color: rgb(4, 12, 36);
@@ -471,4 +512,13 @@ span.navbar-toggler-icon {
 .nav1{
  
   margin-top: 1px;
+}
+
+#cardDeck {
+  color: #eeeeee;
+}
+/* CSS for dropdown scroll menu */
+#go {
+  height: 200px;
+  overflow-y:auto
 }

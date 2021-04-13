@@ -9,22 +9,23 @@ function DeleteBtn(props) {
   const handleClick = (event) => {
     api.delete(props.id).then((results) => {
       props.setHiddenClass();
-      console.log(results);
     });
   };
   const handleDelete = (event) => {
-    props.areYouSure();
+    props.areYouSure(true);
     setDeletePrompt(true);
   };
+  const handleCancelDelete = () => {
+    setDeletePrompt(false);
+    props.areYouSure(false);
+  };
 
-  let id = props.id;
-  console.log(id);
   return (
     <>
       {deletePrompt === true ? (
         <div>
-          <button onClick={handleClick}>Yes</button>
-          <button>No</button>
+          <button className="btns2" onClick={handleClick}>Yes</button>
+          <button className="btns3" onClick={handleCancelDelete}>No </button>
         </div>
       ) : (
         <button className="delete-btn btns1" id="delete" onClick={handleDelete}>
